@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-
+[RequireComponent(typeof(Rigidbody))]
 public class DrivingBehaviour : MonoBehaviour
 {
     #region InUnityInspector
@@ -13,6 +11,7 @@ public class DrivingBehaviour : MonoBehaviour
     [SerializeField] private float maxSpeed;
     [SerializeField] private float maxReverseSpeed;
     [SerializeField] private float rotationSpeed;
+    [SerializeField] private float spaceRotationSpeedModifier;
     #endregion
 
     #region InternalVariables
@@ -21,11 +20,13 @@ public class DrivingBehaviour : MonoBehaviour
     private bool pressedA;
     private bool pressedS;
     private bool pressedD;
+    private bool pressedSpace;
 
     // Physics
     private float velocity;
     #endregion
 
+    #region UnityMethods
     private void Update()
     {
         GetInputBools();
@@ -37,6 +38,9 @@ public class DrivingBehaviour : MonoBehaviour
         DoSteering();
         ResetInputBools();
     }
+    #endregion
+
+    #region PlayerControls
     private void DoAcceleration()
     {
         // Forward
@@ -53,21 +57,33 @@ public class DrivingBehaviour : MonoBehaviour
             velocity -= speed;
         }
 
+        if (pressedSpace)
+        {
+
+        }
+
         // Calculate drag the way unity engine does it
         velocity *= 1 - Time.deltaTime * rb.drag;
     }
 
     private void DoSteering()
     {
-        if (pressedA) rb.angularVelocity -= new Vector3(0, 1, 0) * rotationSpeed;
-        if (pressedD) rb.angularVelocity += new Vector3(0, 1, 0) * rotationSpeed;
+        float modifier = 1;
+        if (pressedSpace) modifier = spaceRotationSpeedModifier;
+
+        if (pressedA) rb.angularVelocity -= new Vector3(0, 1, 0) * rotationSpeed * modifier;
+        if (pressedD) rb.angularVelocity += new Vector3(0, 1, 0) * rotationSpeed * modifier;
     }
+    #endregion
+
+    #region PlayerInput
     private void GetInputBools()
     {
         if (Input.GetKey(KeyCode.W)) pressedW = true;
         if (Input.GetKey(KeyCode.A)) pressedA = true;
         if (Input.GetKey(KeyCode.S)) pressedS = true;
         if (Input.GetKey(KeyCode.D)) pressedD = true;
+        if (Input.GetKey(KeyCode.Space)) pressedSpace = true;
     }
     private void ResetInputBools()
     {
@@ -75,5 +91,7 @@ public class DrivingBehaviour : MonoBehaviour
         pressedA = false;
         pressedS = false;
         pressedD = false;
+        pressedSpace = false;
     }
+    #endregion
 }
