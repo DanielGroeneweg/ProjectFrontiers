@@ -73,3 +73,7 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 #Fuck this shit I'm out
+Project Frontiers/Library
+Project Frontiers/obj
+Project Frontiers/Logs
+Project Frontiers/UserSettings
