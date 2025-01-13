@@ -563,6 +563,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2142786547152154032, guid: c67788f2bcea64a429c53ba44334a5c5,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142786547152154032, guid: c67788f2bcea64a429c53ba44334a5c5,
+        type: 3}
+      propertyPath: maxReverseSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142786547152154032, guid: c67788f2bcea64a429c53ba44334a5c5,
+        type: 3}
+      propertyPath: handbrakeDeacceleration
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142786547152154032, guid: c67788f2bcea64a429c53ba44334a5c5,
+        type: 3}
+      propertyPath: spaceRotationSpeedModifier
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

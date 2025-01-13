@@ -12,6 +12,7 @@ public class DrivingBehaviour : MonoBehaviour
     [SerializeField] private float maxReverseSpeed;
     [SerializeField] private float rotationSpeed;
     [SerializeField] private float spaceRotationSpeedModifier;
+    [SerializeField] private float handbrakeDeacceleration;
     #endregion
 
     #region InternalVariables
@@ -57,9 +58,29 @@ public class DrivingBehaviour : MonoBehaviour
             velocity -= speed;
         }
 
+        // Handbrake
         if (pressedSpace)
         {
+            // When going forward
+            if (velocity > 0)
+            {
+                rb.AddForce(-transform.forward * handbrakeDeacceleration);
+                velocity -= handbrakeDeacceleration;
+            }
 
+            // When going backward
+            else if (velocity < 0)
+            {
+                rb.AddForce(transform.forward * handbrakeDeacceleration);
+                velocity += handbrakeDeacceleration;
+
+                // Make it stop
+                if (velocity > -0.5)
+                {
+                    rb.velocity = Vector3.zero;
+                    velocity = 0;
+                }
+            }
         }
 
         // Calculate drag the way unity engine does it
@@ -68,11 +89,22 @@ public class DrivingBehaviour : MonoBehaviour
 
     private void DoSteering()
     {
+        //Handbrakes
         float modifier = 1;
         if (pressedSpace) modifier = spaceRotationSpeedModifier;
 
-        if (pressedA) rb.angularVelocity -= new Vector3(0, 1, 0) * rotationSpeed * modifier;
-        if (pressedD) rb.angularVelocity += new Vector3(0, 1, 0) * rotationSpeed * modifier;
+        // Steering While driving forward
+        if (velocity > 0)
+        {
+            if (pressedA) rb.AddTorque(-transform.up * rotationSpeed * modifier);
+            if (pressedD) rb.AddTorque(transform.up * rotationSpeed * modifier);
+        }
+
+        else if (velocity < 0)
+        {
+            if (pressedA) rb.AddTorque(transform.up * rotationSpeed * modifier);
+            if (pressedD) rb.AddTorque(-transform.up * rotationSpeed * modifier);
+        }
     }
     #endregion
 

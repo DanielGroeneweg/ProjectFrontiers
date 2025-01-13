@@ -149,9 +149,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 3247155695924890821}
   speed: 100
-  maxSpeed: 1000
-  maxReverseSpeed: 1000
-  rotationSpeed: 0.5
+  maxSpeed: 5000
+  maxReverseSpeed: 500
+  rotationSpeed: 100
+  spaceRotationSpeedModifier: 2
+  handbrakeDeacceleration: 300
 --- !u!1 &5798054525080053360
 GameObject:
   m_ObjectHideFlags: 0
