@@ -100,6 +100,7 @@ public class DrivingBehaviour : MonoBehaviour
             if (pressedD) rb.AddTorque(transform.up * rotationSpeed * modifier);
         }
 
+        // Stering while driving backward
         else if (velocity < 0)
         {
             if (pressedA) rb.AddTorque(transform.up * rotationSpeed * modifier);
