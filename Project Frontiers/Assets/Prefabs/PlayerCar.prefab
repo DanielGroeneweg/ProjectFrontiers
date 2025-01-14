@@ -153,7 +153,7 @@ MonoBehaviour:
   maxReverseSpeed: 500
   rotationSpeed: 100
   spaceRotationSpeedModifier: 2
-  handbrakeDeacceleration: 300
+  handbrakeDeacceleration: 100
 --- !u!1 &5798054525080053360
 GameObject:
   m_ObjectHideFlags: 0
