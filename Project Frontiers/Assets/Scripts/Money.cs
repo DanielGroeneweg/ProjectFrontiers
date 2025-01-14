@@ -7,7 +7,7 @@ public class Money : MonoBehaviour
 {
     [SerializeField] private TMP_Text text;
 
-    public int money;
+    private int money;
     // Start is called before the first frame update
     void Start()
     {
