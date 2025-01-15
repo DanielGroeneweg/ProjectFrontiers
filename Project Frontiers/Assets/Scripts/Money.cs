@@ -13,6 +13,11 @@ public class Money : MonoBehaviour
     {
         //PlayerPrefs.SetInt("Money", 0);
         money = PlayerPrefs.GetInt("Money");
+
+        //Upgrades
+        PlayerPrefs.GetInt("AccelaretionTier", 1);
+        PlayerPrefs.GetInt("SpoilerTier", 1);
+        PlayerPrefs.GetInt("BrakesTier", 1);
     }
 
     // Update is called once per frame
@@ -27,6 +32,15 @@ public class Money : MonoBehaviour
             money = temp;
             PlayerPrefs.SetInt("Money", money);
         }
-        
+
     }
+
+    void UpgradeStats(string upgrade)
+    {
+        PlayerPrefs.SetInt(upgrade, PlayerPrefs.GetInt(upgrade + 1));
+    }
+    
+
+
+    
 }

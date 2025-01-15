@@ -11,7 +11,7 @@ public class MoneyGainer : MonoBehaviour
 
     private int money;
 
-    void start()
+    void Start()
     {
         money = PlayerPrefs.GetInt("Money");
     }
