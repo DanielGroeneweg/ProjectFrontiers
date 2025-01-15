@@ -8,15 +8,17 @@ public class Money : MonoBehaviour
     [SerializeField] private TMP_Text text;
     private int money;
 
-    // All upgrades:
-    private int accelerationTier = 1;
+    private int money;
     // Start is called before the first frame update
     void Start()
     {
         //PlayerPrefs.SetInt("Money", 0);
         money = PlayerPrefs.GetInt("Money");
-        PlayerPrefs.SetInt("AccelerationTier", 1);
-        accelerationTier = PlayerPrefs.GetInt("AccelerationTier");
+
+        //Upgrades
+        PlayerPrefs.GetInt("AccelaretionTier", 1);
+        PlayerPrefs.GetInt("SpoilerTier", 1);
+        PlayerPrefs.GetInt("BrakesTier", 1);
     }
 
     // Update is called once per frame
@@ -31,6 +33,15 @@ public class Money : MonoBehaviour
             money = temp;
             PlayerPrefs.SetInt("Money", money);
         }
-        
+
     }
+
+    void UpgradeStats(string upgrade)
+    {
+        PlayerPrefs.SetInt(upgrade, PlayerPrefs.GetInt(upgrade + 1));
+    }
+    
+
+
+    
 }
