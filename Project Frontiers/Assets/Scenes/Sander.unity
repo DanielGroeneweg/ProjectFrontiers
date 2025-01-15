@@ -1223,7 +1223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDisplay: {fileID: 1092676830}
-  startMinutes: 0
+  startMinutes: 5
   startSeconds: 5
   TimeRanOut:
     m_PersistentCalls:
@@ -1454,7 +1454,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "Dani\xEBl Scene"
+          m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
   triggerStay:

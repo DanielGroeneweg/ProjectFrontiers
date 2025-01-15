@@ -10,6 +10,11 @@ public class MoneyGainer : MonoBehaviour
     [SerializeField] private TMP_Text text;
 
     private int money;
+
+    void start()
+    {
+        money = PlayerPrefs.GetInt("Money");
+    }
     public void MoneyGain()
     {
         text.text = money.ToString();
