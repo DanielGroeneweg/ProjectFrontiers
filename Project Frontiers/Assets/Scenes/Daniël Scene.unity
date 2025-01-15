@@ -940,8 +940,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeDisplay: {fileID: 1092676830}
-  startMinutes: 0
-  startSeconds: 5
+  startMinutes: 5
+  startSeconds: 0
   TimeRanOut:
     m_PersistentCalls:
       m_Calls:
