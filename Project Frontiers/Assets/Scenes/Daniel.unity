@@ -208,7 +208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wheelModel: {fileID: 4171241902685448205}
-  WheelCollider: {fileID: 0}
+  WheelCollider: {fileID: 3174046}
   steerable: 0
   motorized: 1
 --- !u!1 &14957936
@@ -223,9 +223,10 @@ GameObject:
   - component: {fileID: 14957940}
   - component: {fileID: 14957939}
   - component: {fileID: 14957938}
+  - component: {fileID: 14957941}
   m_Layer: 0
-  m_Name: Camera
-  m_TagString: Untagged
+  m_Name: MainCamera
+  m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -348,6 +349,19 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!114 &14957941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14957936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb7569157cc413f48bcef8694d31eca7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCar: {fileID: 3395392572345022487}
 --- !u!1 &40918465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,7 +1195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wheelModel: {fileID: 5836408930547207972}
-  WheelCollider: {fileID: 0}
+  WheelCollider: {fileID: 675522161}
   steerable: 1
   motorized: 1
 --- !u!1 &832575517
@@ -2010,7 +2024,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wheelModel: {fileID: 3444944548894324649}
-  WheelCollider: {fileID: 0}
+  WheelCollider: {fileID: 1187523705}
   steerable: 0
   motorized: 1
 --- !u!1 &1200240896
@@ -2767,7 +2781,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wheelModel: {fileID: 647291461116981150}
-  WheelCollider: {fileID: 0}
+  WheelCollider: {fileID: 2022452876}
   steerable: 1
   motorized: 1
 --- !u!33 &295774513774553785
@@ -2947,6 +2961,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4fb90cb014b0094b8b3a59f75547bbd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wheels:
+  - {fileID: 3174047}
+  - {fileID: 2022452877}
+  - {fileID: 675522162}
+  - {fileID: 1187523706}
+  rigidBody: {fileID: 3395392572345022488}
   motorTorque: 2000
   brakeTorque: 2000
   passiveBrakeTorque: 500
@@ -2954,6 +2974,10 @@ MonoBehaviour:
   steeringRange: 30
   steeringRangeAtMaxSpeed: 10
   centreOfGravityOffset: -1
+  handbrakeSteeringRangeModifier: 2
+  accelerationIncrease: 1000
+  maxSpeedIncrease: 5
+  brakesIncrease: 1000
 --- !u!114 &3395392572345022490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2989,7 +3013,7 @@ MonoBehaviour:
   scoreDisplay: {fileID: 271229409}
   driftScoreDisplay: {fileID: 1629568495}
   scoreIncreaseForDrifting: 10
-  driftAngleMinumim: 0.01
+  driftAngleMinumim: 0.1
   isDrifting: 0
 --- !u!23 &3427878933969871052
 MeshRenderer:
