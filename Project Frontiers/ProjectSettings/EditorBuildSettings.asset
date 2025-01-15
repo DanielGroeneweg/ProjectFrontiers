@@ -12,6 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/DriftingScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
-    path: "Assets/Scenes/Dani\xEBl Scene.unity"
+    path: Assets/Scenes/Daniel.unity
     guid: 4a30dcfa3975aa146a2b3099a3842435
+  - enabled: 1
+    path: Assets/Scenes/UpgradeMenu.unity
+    guid: ddb428e53597a754e838d5f290f6e37f
+  - enabled: 1
+    path: Assets/Scenes/Sander.unity
+    guid: bcf2a2cd633bbdd46b315ace0640ef7b
   m_configObjects: {}

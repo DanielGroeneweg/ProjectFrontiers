@@ -1377,6 +1377,7 @@ GameObject:
   - component: {fileID: 1200240897}
   - component: {fileID: 1200240900}
   - component: {fileID: 1200240899}
+  - component: {fileID: 1200240901}
   m_Layer: 0
   m_Name: finish
   m_TagString: Untagged
@@ -1448,6 +1449,18 @@ MonoBehaviour:
   triggerEnter:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1200240901}
+        m_TargetAssemblyTypeName: MoneyGainer, Assembly-CSharp
+        m_MethodName: MoneyGain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: "Dani\xEBl Scene"
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1200240899}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
@@ -1457,7 +1470,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "Dani\xEBl Scene"
+          m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
   triggerStay:
@@ -1466,6 +1479,19 @@ MonoBehaviour:
   triggerExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1200240901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1200240896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62ab6eb874d51244b9649a1d470b0e3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyIncrease: 100
 --- !u!1 &1629568493
 GameObject:
   m_ObjectHideFlags: 0
