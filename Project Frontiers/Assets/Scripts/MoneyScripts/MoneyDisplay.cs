@@ -15,7 +15,7 @@ public class MoneyDisplay : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            money = PlayerPrefs.GetInt("Money") + 10;
+            money = PlayerPrefs.GetInt("Money") + 5000;
             PlayerPrefs.SetInt("Money", money);
         }
     }
