@@ -34,7 +34,7 @@ public class PointsManager : MonoBehaviour
 
     private void DriftScore()
     {
-        if (driftScoreDisplay.gameObject.activeSelf) driftScoreDisplay.gameObject.SetActive(true);
+        if (!driftScoreDisplay.gameObject.activeSelf) driftScoreDisplay.gameObject.SetActive(true);
         driftScore += scoreIncreaseForDrifting;
         driftScoreDisplay.text = driftScore.ToString();
     }

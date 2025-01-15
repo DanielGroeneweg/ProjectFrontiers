@@ -25,6 +25,7 @@ public class DrivingBehaviour : MonoBehaviour
 
     // Physics
     private float velocity;
+    private float oldVel;
     #endregion
 
     #region UnityMethods
@@ -37,25 +38,63 @@ public class DrivingBehaviour : MonoBehaviour
     {
         DoAcceleration();
         DoSteering();
+        HandleVelocity();
         ResetInputBools();
     }
     #endregion
 
     #region PlayerControls
+    private void HandleVelocity()
+    {
+        float dif = rb.velocity.magnitude - oldVel;
+
+        if (pressedW)
+        {
+            if (dif > 0)
+            {
+                velocity += dif;
+            }
+
+            else if (dif < 0)
+            {
+                velocity += dif;
+            }
+        }
+
+        else if (pressedS)
+        {
+            if (dif > 0)
+            {
+                velocity -= dif;
+            }
+
+            else if (dif < 0)
+            {
+                velocity += dif;
+            }
+        }
+
+        else if (dif < 0) velocity += dif;
+        else if (dif > 0) velocity += dif;
+
+        if (rb.velocity.magnitude == 0) velocity = 0;
+
+        oldVel = rb.velocity.magnitude;
+
+        Debug.Log("Dif: " + dif + " velocity: " + velocity + " rb velocity: " + rb.velocity.magnitude);
+    }
     private void DoAcceleration()
     {
         // Forward
         if (pressedW && velocity < maxSpeed)
         {
             rb.AddForce(transform.forward * speed);
-            velocity += speed;
         }
 
         // Backward/Breaking
         if (pressedS && velocity > -maxReverseSpeed)
         {
             rb.AddForce(-transform.forward * speed);
-            velocity -= speed;
         }
 
         // Handbrake
@@ -65,26 +104,20 @@ public class DrivingBehaviour : MonoBehaviour
             if (velocity > 0)
             {
                 rb.AddForce(-transform.forward * handbrakeDeacceleration);
-                velocity -= handbrakeDeacceleration;
             }
 
             // When going backward
             else if (velocity < 0)
             {
                 rb.AddForce(transform.forward * handbrakeDeacceleration);
-                velocity += handbrakeDeacceleration;
 
                 // Make it stop
                 if (velocity > -0.5)
                 {
                     rb.velocity = Vector3.zero;
-                    velocity = 0;
                 }
             }
         }
-
-        // Calculate drag the way unity engine does it
-        velocity *= 1 - Time.deltaTime * rb.drag;
     }
 
     private void DoSteering()

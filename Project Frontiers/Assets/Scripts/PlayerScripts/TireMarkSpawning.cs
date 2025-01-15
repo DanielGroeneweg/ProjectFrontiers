@@ -1,7 +1,7 @@
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(PointsManager))]
-public class SkidMarkSpawning : MonoBehaviour
+public class TireMarkSpawning : MonoBehaviour
 {
     [SerializeField] private Rigidbody rb;
     [SerializeField] private PointsManager pointsManager;
