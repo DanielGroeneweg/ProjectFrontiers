@@ -1,22 +1,25 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PointsManager : MonoBehaviour
 {
+    // In Unity Inspector
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private TMP_Text scoreDisplay;
     [SerializeField] private TMP_Text driftScoreDisplay;
     [SerializeField] private float scoreIncreaseForDrifting;
+    [SerializeField] private float driftAngleMinumim;
+
+    // Not In Unity Inspector
+    [HideInInspector] public bool isDrifting;
+
+    // Internal
     private float score;
     private float driftScore;
-    private bool isDrifting;
     private float driftTime;
     private void FixedUpdate()
     {
-        if (playerRB.angularVelocity.magnitude > 0.01f) isDrifting = true;
+        if (playerRB.angularVelocity.magnitude > driftAngleMinumim) isDrifting = true;
         else isDrifting = false;
 
         if (isDrifting) DriftScore();

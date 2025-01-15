@@ -563,34 +563,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 271229407}
   m_CullTransparentMesh: 1
---- !u!1 &318375283 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 836049192897718338, guid: c67788f2bcea64a429c53ba44334a5c5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1073755382869713675}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &318375285
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 318375283}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f37504d32172a0541aa3add5e1399247, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerRB: {fileID: 318375286}
-  scoreDisplay: {fileID: 271229409}
-  driftScoreDisplay: {fileID: 1629568495}
-  scoreIncreaseForDrifting: 10
---- !u!54 &318375286 stripped
-Rigidbody:
-  m_CorrespondingSourceObject: {fileID: 3247155695924890821, guid: c67788f2bcea64a429c53ba44334a5c5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1073755382869713675}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &330668938
 GameObject:
   m_ObjectHideFlags: 0
@@ -1782,7 +1754,7 @@ PrefabInstance:
     - target: {fileID: 1063043185058025037, guid: c67788f2bcea64a429c53ba44334a5c5,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.61
+      value: 0.77
       objectReference: {fileID: 0}
     - target: {fileID: 1063043185058025037, guid: c67788f2bcea64a429c53ba44334a5c5,
         type: 3}
@@ -1844,14 +1816,40 @@ PrefabInstance:
       propertyPath: spaceRotationSpeedModifier
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7857869032599037190, guid: c67788f2bcea64a429c53ba44334a5c5,
+        type: 3}
+      propertyPath: scoreDisplay
+      value: 
+      objectReference: {fileID: 271229409}
+    - target: {fileID: 7857869032599037190, guid: c67788f2bcea64a429c53ba44334a5c5,
+        type: 3}
+      propertyPath: driftAngleMinumim
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 7857869032599037190, guid: c67788f2bcea64a429c53ba44334a5c5,
+        type: 3}
+      propertyPath: driftScoreDisplay
+      value: 
+      objectReference: {fileID: 1629568495}
+    - target: {fileID: 7857869032599037190, guid: c67788f2bcea64a429c53ba44334a5c5,
+        type: 3}
+      propertyPath: scoreIncreaseForDrifting
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886331732170995095, guid: c67788f2bcea64a429c53ba44334a5c5,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886331732170995095, guid: c67788f2bcea64a429c53ba44334a5c5,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.335
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 836049192897718338, guid: c67788f2bcea64a429c53ba44334a5c5,
-        type: 3}
-      insertIndex: 5
-      addedObject: {fileID: 318375285}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c67788f2bcea64a429c53ba44334a5c5, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
