@@ -2035,6 +2035,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4494687650929485619, guid: c6301554eeef4ef4a9030fe96971e981,
+        type: 3}
+      propertyPath: maxSpeed
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4696021435535225079, guid: c6301554eeef4ef4a9030fe96971e981,
         type: 3}
       propertyPath: timer
