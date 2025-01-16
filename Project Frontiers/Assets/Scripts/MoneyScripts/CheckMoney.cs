@@ -11,4 +11,9 @@ public class CheckMoney : MonoBehaviour
         if (PlayerPrefs.GetInt("Money") >= moneyRequired) hasEnough?.Invoke();
         else insufficientFunds?.Invoke();
     }
+
+    public void TakeMoney(int amount)
+    {
+        PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") - amount);
+    }
 }

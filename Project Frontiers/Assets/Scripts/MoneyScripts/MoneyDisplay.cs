@@ -5,13 +5,9 @@ public class MoneyDisplay : MonoBehaviour
 {
     [SerializeField] private TMP_Text moneyDisplay;
     private int money;
-    private void Start()
-    {
-        money = PlayerPrefs.GetInt("Money");
-    }
     void Update()
     {
-        moneyDisplay.text = money.ToString();
+        moneyDisplay.text = PlayerPrefs.GetInt("Money").ToString();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
