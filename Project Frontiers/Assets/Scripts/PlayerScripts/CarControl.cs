@@ -27,7 +27,7 @@ public class CarControl : MonoBehaviour
     private float vInput;
     private float hInput;
     private bool handBrake;
-    private bool playerControls;
+    private bool playerControls = true;
     #endregion
 
     #region UnityMethods

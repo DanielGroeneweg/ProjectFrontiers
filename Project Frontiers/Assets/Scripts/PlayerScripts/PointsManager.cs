@@ -23,19 +23,26 @@ public class PointsManager : MonoBehaviour
     private float score;
     private float driftScore;
     private float driftTime;
+    private bool PointsCanBeScored = true;
     private void FixedUpdate()
     {
-        if (playerRB.angularVelocity.magnitude > driftAngleMinumim) isDrifting = true;
-        else isDrifting = false;
-
-        if (isDrifting) DriftScore();
-        else if (driftScore > 0)
+        if (PointsCanBeScored)
         {
-            score += driftScore;
-            driftScore = 0;
-            scoreDisplay.text = score.ToString();
-            driftScoreDisplay.gameObject.SetActive(false);
+            if (playerRB.angularVelocity.magnitude > driftAngleMinumim) isDrifting = true;
+            else isDrifting = false;
+
+            if (isDrifting) DriftScore();
+            else if (driftScore > 0) ApplyDirftScore();
         }
+
+        else if (driftScore > 0) ApplyDirftScore();
+    }
+    private void ApplyDirftScore()
+    {
+        score += driftScore;
+        driftScore = 0;
+        scoreDisplay.text = score.ToString();
+        driftScoreDisplay.gameObject.SetActive(false);
     }
     private void DriftScore()
     {
@@ -50,5 +57,9 @@ public class PointsManager : MonoBehaviour
     public void ConvertScoreToMoney()
     {
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + Mathf.FloorToInt(score / pointsPerMoney));
+    }
+    public void DisablePointsGaining()
+    {
+        PointsCanBeScored = false;
     }
 }

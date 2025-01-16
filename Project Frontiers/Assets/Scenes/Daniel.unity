@@ -1609,18 +1609,6 @@ MonoBehaviour:
           m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6429299134389266230}
-        m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
-        m_MethodName: ConvertScoreToMoney
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: StartMenu
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 6429299134389266231}
         m_TargetAssemblyTypeName: CarControl, Assembly-CSharp
         m_MethodName: DisablePlayerControls
@@ -1630,6 +1618,30 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
+          m_StringArgument: StartMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6429299134389266230}
+        m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
+        m_MethodName: DisablePointsGaining
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: StartMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1200240902}
+        m_TargetAssemblyTypeName: WaitScript, Assembly-CSharp
+        m_MethodName: StartWaiting
+        m_Mode: 4
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
           m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
@@ -1666,6 +1678,18 @@ MonoBehaviour:
   AfterWaiting:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 6429299134389266230}
+        m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
+        m_MethodName: ConvertScoreToMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StartMenu
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1200240899}
         m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
         m_MethodName: LoadScene
