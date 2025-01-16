@@ -11,16 +11,18 @@ public class PlayTimer : MonoBehaviour
     public UnityEvent TimeRanOut;
 
     // Internal
+    private bool timerPlaying;
     private float seconds;
     private float minutes;
     private void Start()
     {
+        timerPlaying = true;
         seconds = startSeconds;
         minutes = startMinutes;
     }
     private void Update()
     {
-        DoTimer();
+        if  (timerPlaying) DoTimer();
         DisplayTimer();
     }
     private void DoTimer()
@@ -49,5 +51,13 @@ public class PlayTimer : MonoBehaviour
             if (seconds < 10) timeDisplay.text = ((int)minutes).ToString() + ":0" + ((int)seconds).ToString();
             else timeDisplay.text = ((int)minutes).ToString() + ":" + ((int)seconds).ToString();
         }
+    }
+    public void StopTimer()
+    {
+        timerPlaying = false;
+    }
+    public float GetSecondsLeft()
+    {
+        return Mathf.Floor(seconds + minutes * 60);
     }
 }

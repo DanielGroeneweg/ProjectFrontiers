@@ -1575,13 +1575,49 @@ MonoBehaviour:
       - m_Target: {fileID: 1200240901}
         m_TargetAssemblyTypeName: MoneyGainer, Assembly-CSharp
         m_MethodName: MoneyGain
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 500
+          m_FloatArgument: 0
+          m_StringArgument: "Dani\xEBl Scene"
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1092676829}
+        m_TargetAssemblyTypeName: PlayTimer, Assembly-CSharp
+        m_MethodName: StopTimer
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: "Dani\xEBl Scene"
+          m_StringArgument: StartMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6429299134389266230}
+        m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
+        m_MethodName: ConvertTimeLeftToScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StartMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6429299134389266230}
+        m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
+        m_MethodName: ConvertScoreToMoney
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1200240899}
@@ -1614,7 +1650,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab6eb874d51244b9649a1d470b0e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyIncrease: 100
 --- !u!1 &1629568493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,14 +1985,29 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4696021435535225079, guid: c6301554eeef4ef4a9030fe96971e981,
         type: 3}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 1092676829}
+    - target: {fileID: 4696021435535225079, guid: c6301554eeef4ef4a9030fe96971e981,
+        type: 3}
       propertyPath: scoreDisplay
       value: 
       objectReference: {fileID: 271229409}
     - target: {fileID: 4696021435535225079, guid: c6301554eeef4ef4a9030fe96971e981,
         type: 3}
+      propertyPath: pointsPerMoney
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696021435535225079, guid: c6301554eeef4ef4a9030fe96971e981,
+        type: 3}
       propertyPath: driftScoreDisplay
       value: 
       objectReference: {fileID: 1629568495}
+    - target: {fileID: 4696021435535225079, guid: c6301554eeef4ef4a9030fe96971e981,
+        type: 3}
+      propertyPath: pointsPerSecondLeft
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8445807342196918752, guid: c6301554eeef4ef4a9030fe96971e981,
         type: 3}
       propertyPath: m_Name
@@ -1968,6 +2018,18 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6301554eeef4ef4a9030fe96971e981, type: 3}
+--- !u!114 &6429299134389266230 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4696021435535225079, guid: c6301554eeef4ef4a9030fe96971e981,
+    type: 3}
+  m_PrefabInstance: {fileID: 6429299134389266229}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37504d32172a0541aa3add5e1399247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

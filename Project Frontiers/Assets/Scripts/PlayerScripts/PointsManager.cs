@@ -4,11 +4,17 @@ using UnityEngine;
 public class PointsManager : MonoBehaviour
 {
     // In Unity Inspector
+    [Header("Required Components")]
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private TMP_Text scoreDisplay;
     [SerializeField] private TMP_Text driftScoreDisplay;
+    [SerializeField] private PlayTimer timer;
+
+    [Header("Stats")]
     [SerializeField] private float scoreIncreaseForDrifting;
     [SerializeField] private float driftAngleMinumim;
+    [SerializeField] private float pointsPerMoney;
+    [SerializeField] private float pointsPerSecondLeft;
 
     // Not In Unity Inspector
     [HideInInspector] public bool isDrifting;
@@ -36,5 +42,13 @@ public class PointsManager : MonoBehaviour
         if (!driftScoreDisplay.gameObject.activeSelf) driftScoreDisplay.gameObject.SetActive(true);
         driftScore += scoreIncreaseForDrifting;
         driftScoreDisplay.text = driftScore.ToString();
+    }
+    public void ConvertTimeLeftToScore()
+    {
+        score += timer.GetSecondsLeft() * pointsPerSecondLeft;
+    }
+    public void ConvertScoreToMoney()
+    {
+        PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + Mathf.FloorToInt(score / pointsPerMoney));
     }
 }
