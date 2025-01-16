@@ -24,6 +24,7 @@ public class UpgradesManager : MonoBehaviour
         PlayerPrefs.SetInt("SpoilerTier", 1);
         PlayerPrefs.SetInt("BrakesTier", 1);
         PlayerPrefs.SetInt("EngineTier", 1);
+        PlayerPrefs.SetInt("Money", 0);
         */
     }
 
