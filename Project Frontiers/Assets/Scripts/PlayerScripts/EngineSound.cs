@@ -15,9 +15,13 @@ public class EngineSound : MonoBehaviour
         float diff = pitchMax - pitchMin;
         float percentage = carControl.SpeedFactor();
 
+        // If the player is not standing still
         if (percentage > 0)
         {
+            // Cange the pitch according to the speed while the engine sound is playing
             if (engineSound.isPlaying) engineSound.pitch = pitchMin + diff * percentage;
+
+            // Start playing the engine sound
             else
             {
                 engineSound.pitch = pitchMin;
@@ -25,6 +29,7 @@ public class EngineSound : MonoBehaviour
             }
         }
 
+        // Stop playing the engine sound if the player is standing still
         else if (engineSound.isPlaying) engineSound.Stop();
     }
 }
