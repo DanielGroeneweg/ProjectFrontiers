@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sander.unity
     guid: bcf2a2cd633bbdd46b315ace0640ef7b
+  - enabled: 1
+    path: Assets/Scenes/Level Design.unity
+    guid: 58c82930b656ba34db7368a611a04e24
   m_configObjects: {}
