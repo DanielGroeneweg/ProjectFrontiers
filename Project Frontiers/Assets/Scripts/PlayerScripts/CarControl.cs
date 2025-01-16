@@ -24,9 +24,10 @@ public class CarControl : MonoBehaviour
     [SerializeField] private float brakesIncrease;
 
     // Internal
-    float vInput;
-    float hInput;
-    bool handBrake;
+    private float vInput;
+    private float hInput;
+    private bool handBrake;
+    private bool playerControls;
     #endregion
 
     #region UnityMethods
@@ -104,11 +105,25 @@ public class CarControl : MonoBehaviour
     #endregion
 
     #region PlayerInput
+    public void DisablePlayerControls()
+    {
+        playerControls = false;
+    }
     private void GetPlayerInputs()
     {
-        vInput = Input.GetAxis("Vertical");
-        hInput = Input.GetAxis("Horizontal");
-        handBrake = Input.GetKey(KeyCode.Space);
+        if (playerControls)
+        {
+            vInput = Input.GetAxis("Vertical");
+            hInput = Input.GetAxis("Horizontal");
+            handBrake = Input.GetKey(KeyCode.Space);
+        }
+        
+        else
+        {
+            vInput = 0;
+            hInput = 0;
+            handBrake = false;
+        }
     }
     #endregion
 
