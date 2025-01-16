@@ -2976,9 +2976,9 @@ MonoBehaviour:
   centreOfGravityOffset: -1
   handbrakeSteeringRangeModifier: 2
   handbrakeBrakeTorqueModifier: 2
-  accelerationIncrease: 1000
-  maxSpeedIncrease: 5
-  brakesIncrease: 1000
+  accelerationIncrease: 0
+  maxSpeedIncrease: 0
+  brakesIncrease: 0
 --- !u!114 &3395392572345022490
 MonoBehaviour:
   m_ObjectHideFlags: 0

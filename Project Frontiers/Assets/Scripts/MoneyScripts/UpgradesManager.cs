@@ -1,8 +1,6 @@
 using System;
 using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
-
 public class UpgradesManager : MonoBehaviour
 {
     [Serializable] public class Upgrade
@@ -19,20 +17,16 @@ public class UpgradesManager : MonoBehaviour
     void Start()
     {
         //Upgrades
-        /*
         PlayerPrefs.SetInt("AccelerationTier", 1);
         PlayerPrefs.SetInt("SpoilerTier", 1);
         PlayerPrefs.SetInt("BrakesTier", 1);
         PlayerPrefs.SetInt("EngineTier", 1);
         PlayerPrefs.SetInt("Money", 0);
-        */
     }
-
     public void UpgradeStat(string upgrade)
     {
         PlayerPrefs.SetInt(upgrade, PlayerPrefs.GetInt(upgrade) + 1);
     }
-
     private void Update()
     {
         foreach (Upgrade upgrade in upgrades)

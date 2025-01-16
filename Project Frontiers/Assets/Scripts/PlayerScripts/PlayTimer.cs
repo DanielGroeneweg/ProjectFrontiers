@@ -1,7 +1,6 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
-
 [RequireComponent(typeof(TMP_Text))]
 public class PlayTimer : MonoBehaviour
 {
@@ -14,7 +13,6 @@ public class PlayTimer : MonoBehaviour
     // Internal
     private float seconds;
     private float minutes;
-
     private void Start()
     {
         seconds = startSeconds;
@@ -25,7 +23,6 @@ public class PlayTimer : MonoBehaviour
         DoTimer();
         DisplayTimer();
     }
-
     private void DoTimer()
     {
         if (Mathf.Floor(seconds) < 0)
@@ -38,7 +35,6 @@ public class PlayTimer : MonoBehaviour
 
         if (minutes <= 0 && seconds <= 0) TimeRanOut?.Invoke();
     }
-
     private void DisplayTimer()
     {
         if (minutes < 10)

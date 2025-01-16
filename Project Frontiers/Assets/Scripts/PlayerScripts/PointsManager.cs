@@ -31,7 +31,6 @@ public class PointsManager : MonoBehaviour
             driftScoreDisplay.gameObject.SetActive(false);
         }
     }
-
     private void DriftScore()
     {
         if (!driftScoreDisplay.gameObject.activeSelf) driftScoreDisplay.gameObject.SetActive(true);

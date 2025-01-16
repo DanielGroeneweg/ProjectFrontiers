@@ -9,12 +9,10 @@ public class TriggerInvoker : MonoBehaviour
     {
         triggerEnter?.Invoke();
     }
-
     public void OnTriggerStay(Collider other)
     {
         triggerStay?.Invoke();
     }
-
     private void OnTriggerExit(Collider other)
     {
         triggerExit?.Invoke();

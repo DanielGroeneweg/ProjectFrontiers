@@ -1,20 +1,17 @@
 using UnityEngine;
-[RequireComponent(typeof(Rigidbody))]
 [RequireComponent(typeof(PointsManager))]
 public class TireMarkSpawning : MonoBehaviour
 {
-    [SerializeField] private Rigidbody rb;
     [SerializeField] private PointsManager pointsManager;
     [SerializeField] private TrailRenderer[] tireMarks;
 
+    // Internal
     private bool tireMarksFlags = false;
-
     private void Update()
     {
         if (pointsManager.isDrifting) StartEmitter();
         else StopEmitter();
     }
-
     private void StartEmitter()
     {
         if (tireMarksFlags) return;
@@ -25,7 +22,6 @@ public class TireMarkSpawning : MonoBehaviour
 
         tireMarksFlags = true;
     }
-
     private void StopEmitter()
     {
         if (!tireMarksFlags) return;

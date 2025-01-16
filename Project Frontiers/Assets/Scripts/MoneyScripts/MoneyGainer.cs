@@ -3,7 +3,6 @@ public class MoneyGainer : MonoBehaviour
 {
     [SerializeField] private int moneyIncrease;
     private int money;
-
     void Start()
     {
         money = PlayerPrefs.GetInt("Money");
