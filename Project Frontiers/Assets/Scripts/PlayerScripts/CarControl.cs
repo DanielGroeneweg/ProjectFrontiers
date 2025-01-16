@@ -119,7 +119,7 @@ public class CarControl : MonoBehaviour
         if (PlayerPrefs.GetInt("AccelerationTier") > 1) motorTorque += (PlayerPrefs.GetInt("AccelerationTier") - 1) * accelerationIncrease;
 
         // Max Speed
-        if (PlayerPrefs.GetInt("EngineTier") > 1) maxSpeed += (PlayerPrefs.GetInt("Engine") - 1) * maxSpeedIncrease;
+        if (PlayerPrefs.GetInt("EngineTier") > 1) maxSpeed += (PlayerPrefs.GetInt("EngineTier") - 1) * maxSpeedIncrease;
 
         // Brakes
         if (PlayerPrefs.GetInt("BrakesTier") > 1) brakeTorque += (PlayerPrefs.GetInt("BrakesTier") - 1) * brakesIncrease;

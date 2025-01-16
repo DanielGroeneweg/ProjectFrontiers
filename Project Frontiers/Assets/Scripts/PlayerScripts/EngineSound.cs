@@ -10,6 +10,11 @@ public class EngineSound : MonoBehaviour
     [Header("Sound Stats")]
     [SerializeField] private float pitchMin;
     [SerializeField] private float pitchMax;
+    [SerializeField] private float pitchMaxIncrease;
+    private void Start()
+    {
+        pitchMax += (PlayerPrefs.GetInt("EngineTier") - 1) * pitchMaxIncrease;
+    }
     private void Update()
     {
         float diff = pitchMax - pitchMin;
