@@ -131,15 +131,17 @@ public class CarControl : MonoBehaviour
     #region Functions
     // Calculate current speed in relation to the forward direction of the car
     // (this returns a negative number when traveling backwards)
-    private float ForwardSpeed()
+    public float ForwardSpeed()
     {
         return Vector3.Dot(transform.forward, rigidBody.velocity);
     }
 
     // Calculate how close the car is to top speed as a number from zero to one
-    private float SpeedFactor()
+    public float SpeedFactor()
     {
-        return Mathf.InverseLerp(0, maxSpeed, ForwardSpeed());
+        if (ForwardSpeed() >= 0) return Mathf.InverseLerp(0, maxSpeed, ForwardSpeed());
+        else if (ForwardSpeed() < 0) return Mathf.InverseLerp(0, -maxSpeed, ForwardSpeed());
+        return 0;
     }
 
     // Use the speed factor to calculate how much torque is available 
