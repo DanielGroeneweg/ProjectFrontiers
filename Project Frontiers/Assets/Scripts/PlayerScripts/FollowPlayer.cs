@@ -5,6 +5,10 @@ public class FollowPlayer : MonoBehaviour
 
     // Internal
     private Vector3 oldPosition;
+    private void Start()
+    {
+        oldPosition = playerCar.position;
+    }
     private void Update()
     {
         Vector3 movementChange = playerCar.position - oldPosition;
