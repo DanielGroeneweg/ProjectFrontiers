@@ -151,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 14957936}
   serializedVersion: 2
   m_LocalRotation: {x: 0.30070576, y: -0, z: -0, w: 0.953717}
-  m_LocalPosition: {x: -2.3171196, y: 14.11, z: -20.52}
+  m_LocalPosition: {x: 3.19, y: 14.110001, z: -20.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1815,7 +1815,7 @@ GameObject:
   - component: {fileID: 943022062}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3277,6 +3277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f37504d32172a0541aa3add5e1399247, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  carControl: {fileID: 1714683684}
   playerRB: {fileID: 1714683678}
   scoreDisplay: {fileID: 271229409}
   driftScoreDisplay: {fileID: 1629568495}
@@ -3313,6 +3314,7 @@ MonoBehaviour:
   centreOfGravityOffset: -1
   handbrakeSteeringRangeModifier: 2
   handbrakeBrakeTorqueModifier: 2
+  groundOffSet: 0.1
   accelerationIncrease: 500
   maxSpeedIncrease: 10
   brakesIncrease: 500

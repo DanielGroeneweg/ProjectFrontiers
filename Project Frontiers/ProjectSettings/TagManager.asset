@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftWheel
   - RightWheel
+  - Road
   layers:
   - Default
   - TransparentFX

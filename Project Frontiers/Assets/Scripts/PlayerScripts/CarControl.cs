@@ -17,6 +17,7 @@ public class CarControl : MonoBehaviour
     [SerializeField] private float centreOfGravityOffset = -1f;
     [SerializeField] private float handbrakeSteeringRangeModifier = 2;
     [SerializeField] private float handbrakeBrakeTorqueModifier = 2;
+    [SerializeField] private float groundOffSet = 0.1f;
 
     [Header("Upgrade Stats")]
     [SerializeField] private float accelerationIncrease;
@@ -171,6 +172,18 @@ public class CarControl : MonoBehaviour
     private float CurrentSteerRange()
     {
         return Mathf.Lerp(steeringRange, steeringRangeAtMaxSpeed, SpeedFactor());
+    }
+
+    // Checks if the car is touching the ground with 4 wheels
+    public bool isOnGround()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, -transform.up, out hit, groundOffSet))
+        {
+            if (hit.collider.tag == "Road") return true;
+            else return false;
+        }
+        else return false;
     }
     #endregion
 }

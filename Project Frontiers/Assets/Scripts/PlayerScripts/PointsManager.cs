@@ -5,6 +5,7 @@ public class PointsManager : MonoBehaviour
 {
     // In Unity Inspector
     [Header("Required Components")]
+    [SerializeField] private CarControl carControl;
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private TMP_Text scoreDisplay;
     [SerializeField] private TMP_Text driftScoreDisplay;
@@ -28,7 +29,7 @@ public class PointsManager : MonoBehaviour
     {
         if (PointsCanBeScored)
         {
-            if (playerRB.angularVelocity.magnitude > driftAngleMinumim) isDrifting = true;
+            if (playerRB.angularVelocity.magnitude > driftAngleMinumim && carControl.isOnGround()) isDrifting = true;
             else isDrifting = false;
 
             if (isDrifting) DriftScore();
