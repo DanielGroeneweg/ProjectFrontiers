@@ -13854,7 +13854,19 @@ MonoBehaviour:
   AfterWaiting:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1051934501}
+        m_TargetAssemblyTypeName: MoneyGainer, Assembly-CSharp
+        m_MethodName: GainMoney
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 500
+          m_FloatArgument: 0
+          m_StringArgument: EndScene
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6611668311543063287}
         m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
         m_MethodName: ConvertScoreToMoney
         m_Mode: 1
@@ -13875,7 +13887,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartMenu
+          m_StringArgument: EndScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1051934504
@@ -13893,18 +13905,6 @@ MonoBehaviour:
   triggerEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1051934501}
-        m_TargetAssemblyTypeName: MoneyGainer, Assembly-CSharp
-        m_MethodName: MoneyGain
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 500
-          m_FloatArgument: 0
-          m_StringArgument: "Dani\xEBl Scene"
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 134512175}
         m_TargetAssemblyTypeName: PlayTimer, Assembly-CSharp
         m_MethodName: StopTimer
@@ -13917,19 +13917,19 @@ MonoBehaviour:
           m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6611668311543063287}
         m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
-        m_MethodName: ConvertTimeLeftToScore
+        m_MethodName: DisablePointsGaining
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 0
+          m_FloatArgument: 5
           m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6611668311543063288}
         m_TargetAssemblyTypeName: CarControl, Assembly-CSharp
         m_MethodName: DisablePlayerControls
         m_Mode: 1
@@ -13941,15 +13941,15 @@ MonoBehaviour:
           m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 6611668311543063287}
         m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
-        m_MethodName: DisablePointsGaining
+        m_MethodName: ConvertTimeLeftToScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
-          m_FloatArgument: 5
+          m_FloatArgument: 0
           m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
@@ -17883,6 +17883,30 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1de5500a62a62f844906f6a0121e78ca, type: 3}
+--- !u!114 &6611668311543063287 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 323766660863073075, guid: 1de5500a62a62f844906f6a0121e78ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 6611668311543063286}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37504d32172a0541aa3add5e1399247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6611668311543063288 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7754905759081485912, guid: 1de5500a62a62f844906f6a0121e78ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 6611668311543063286}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fb90cb014b0094b8b3a59f75547bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

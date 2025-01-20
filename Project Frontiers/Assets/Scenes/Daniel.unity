@@ -151,7 +151,7 @@ Transform:
   m_GameObject: {fileID: 14957936}
   serializedVersion: 2
   m_LocalRotation: {x: 0.30070576, y: -0, z: -0, w: 0.953717}
-  m_LocalPosition: {x: 3.19, y: 14.110001, z: -20.52}
+  m_LocalPosition: {x: 0, y: 14.110001, z: -20.52}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7569157cc413f48bcef8694d31eca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCar: {fileID: 0}
+  playerCar: {fileID: 926010528}
 --- !u!1 &40918465
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,6 +1122,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &926010528 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2406360333805068721, guid: 1de5500a62a62f844906f6a0121e78ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1251963565}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &943022061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,7 +1758,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: StartMenu
+          m_StringArgument: EndScene
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!1001 &1251963565
@@ -1788,10 +1794,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mazda_RX7
       objectReference: {fileID: 0}
+    - target: {fileID: 2288225426179769170, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7ba38731cb0705545bea75c9dae3e1da, type: 2}
     - target: {fileID: 2406360333805068721, guid: 1de5500a62a62f844906f6a0121e78ca,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.93982697
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2406360333805068721, guid: 1de5500a62a62f844906f6a0121e78ca,
         type: 3}
@@ -1801,7 +1812,7 @@ PrefabInstance:
     - target: {fileID: 2406360333805068721, guid: 1de5500a62a62f844906f6a0121e78ca,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -29.436874
+      value: -4.07
       objectReference: {fileID: 0}
     - target: {fileID: 2406360333805068721, guid: 1de5500a62a62f844906f6a0121e78ca,
         type: 3}
@@ -1838,6 +1849,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2810887305222137145, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f3d79e4b70e6ff840b901340cfb87f1e, type: 2}
+    - target: {fileID: 4007389213226013679, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7ba38731cb0705545bea75c9dae3e1da, type: 2}
+    - target: {fileID: 4655421474693713652, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7ba38731cb0705545bea75c9dae3e1da, type: 2}
+    - target: {fileID: 6927066754965900881, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7ba38731cb0705545bea75c9dae3e1da, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

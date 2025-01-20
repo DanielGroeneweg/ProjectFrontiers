@@ -54,10 +54,14 @@ public class PointsManager : MonoBehaviour
     public void ConvertTimeLeftToScore()
     {
         score += timer.GetSecondsLeft() * pointsPerSecondLeft;
+        PlayerPrefs.SetInt("SecondsLeft", (int)timer.GetSecondsLeft());
+        PlayerPrefs.SetInt("TimeLeftScore", (int)(timer.GetSecondsLeft() * pointsPerSecondLeft));
     }
     public void ConvertScoreToMoney()
     {
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + Mathf.FloorToInt(score / pointsPerMoney));
+        PlayerPrefs.SetInt("Score", (int)score);
+        PlayerPrefs.SetInt("ScoreToMoney", Mathf.FloorToInt(score / pointsPerMoney));
     }
     public void DisablePointsGaining()
     {
