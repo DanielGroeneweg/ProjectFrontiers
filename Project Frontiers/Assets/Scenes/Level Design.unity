@@ -17818,6 +17818,11 @@ PrefabInstance:
       propertyPath: driftScoreDisplay
       value: 
       objectReference: {fileID: 1475307848}
+    - target: {fileID: 1170591686901074444, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: firstCheckpoint
+      value: 
+      objectReference: {fileID: 1421540821}
     - target: {fileID: 1618134455254441014, guid: 1de5500a62a62f844906f6a0121e78ca,
         type: 3}
       propertyPath: firstCheckpoint
