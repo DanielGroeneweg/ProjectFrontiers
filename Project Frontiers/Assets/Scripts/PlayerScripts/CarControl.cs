@@ -4,8 +4,8 @@ public class CarControl : MonoBehaviour
     #region variables
     // In Inspector
     [Header("Required  Components")]
-    [SerializeField] WheelControl[] wheels;
-    [SerializeField] Rigidbody rigidBody;
+    public WheelControl[] wheels;
+    [SerializeField] private Rigidbody rigidBody;
 
     [Header("Stats")]
     [SerializeField] private float motorTorque = 2000;
