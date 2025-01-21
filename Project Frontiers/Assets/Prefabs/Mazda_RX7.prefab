@@ -242,6 +242,8 @@ MonoBehaviour:
   driftAngleMinumim: 0.1
   pointsPerMoney: 100
   pointsPerSecondLeft: 10
+  timeBeforeStartingDrift: 1
+  timeBeforeStoppingDrift: 1
   isDrifting: 0
 --- !u!114 &5389249022028315911
 MonoBehaviour:

@@ -16,6 +16,8 @@ public class PointsManager : MonoBehaviour
     [SerializeField] private float driftAngleMinumim;
     [SerializeField] private float pointsPerMoney;
     [SerializeField] private float pointsPerSecondLeft;
+    [SerializeField] private float timeBeforeStartingDrift;
+    [SerializeField] private float timeBeforeStoppingDrift;
 
     // Not In Unity Inspector
     [HideInInspector] public bool isDrifting;
@@ -25,13 +27,52 @@ public class PointsManager : MonoBehaviour
     private float driftScore;
     private float driftTime;
     private bool PointsCanBeScored = true;
+    private bool startedDrift = false;
+    private float time;
     private void FixedUpdate()
     {
         if (PointsCanBeScored)
         {
-            if (playerRB.angularVelocity.magnitude > driftAngleMinumim && carControl.isOnGround()) isDrifting = true;
-            else isDrifting = false;
+            // If the car is sideways, start drifting
+            if (playerRB.angularVelocity.magnitude > driftAngleMinumim && carControl.isOnGround())
+            {
+                startedDrift = true;
+            }
 
+            // If the car is not sideways ...
+            else
+            {
+                // ... and it has not actually begun drifting
+                // Stop
+                if (startedDrift && !isDrifting)
+                {
+                    startedDrift = false;
+                    driftTime = 0;
+                }
+
+                // ... and it has also already started to drift
+                else if (startedDrift && isDrifting)
+                {
+                    time += Time.deltaTime;
+                    
+                    // stop drifting after not drifting for x seconds
+                    if (time >= timeBeforeStoppingDrift)
+                    {
+                        time = 0;
+                        startedDrift = false;
+                        isDrifting = false;
+                    }
+                }
+            };
+
+            // Start drifting if 
+            if (startedDrift && !isDrifting)
+            {
+                driftTime += Time.deltaTime;
+                if (driftTime >= timeBeforeStartingDrift) isDrifting = true;
+            }
+
+            // Do drifting
             if (isDrifting) DriftScore();
             else if (driftScore > 0) ApplyDirftScore();
         }
