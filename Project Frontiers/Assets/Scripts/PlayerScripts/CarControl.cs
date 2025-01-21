@@ -63,7 +63,10 @@ public class CarControl : MonoBehaviour
             if (wheel.steerable)
             {
                 float modifier = 1;
-                if (handBrake) modifier = handbrakeSteeringRangeModifier;
+                if (handBrake)
+                {
+                    modifier = handbrakeSteeringRangeModifier;
+                }
                 wheel.WheelCollider.steerAngle = hInput * CurrentSteerRange() * modifier;
             }
 

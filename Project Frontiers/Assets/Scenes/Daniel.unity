@@ -1794,6 +1794,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mazda_RX7
       objectReference: {fileID: 0}
+    - target: {fileID: 2142373966101956306, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142373966101956306, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumSlip
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142373966101956306, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142373966101956306, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_ExtremumSlip
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2142373966101956306, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_ExtremumValue
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2288225426179769170, guid: 1de5500a62a62f844906f6a0121e78ca,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -1864,11 +1889,96 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7ba38731cb0705545bea75c9dae3e1da, type: 2}
+    - target: {fileID: 4932507783002704718, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932507783002704718, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_Stiffness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932507783002704718, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumSlip
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932507783002704718, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932507783002704718, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_ExtremumSlip
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4932507783002704718, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_ExtremumValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008568719287067892, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008568719287067892, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumSlip
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008568719287067892, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008568719287067892, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_ExtremumSlip
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008568719287067892, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_ExtremumValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465227153197112805, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465227153197112805, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumSlip
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465227153197112805, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_ExtremumValue
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465227153197112805, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_ExtremumSlip
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465227153197112805, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: m_SidewaysFriction.m_ExtremumValue
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6927066754965900881, guid: 1de5500a62a62f844906f6a0121e78ca,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 7ba38731cb0705545bea75c9dae3e1da, type: 2}
+    - target: {fileID: 7754905759081485912, guid: 1de5500a62a62f844906f6a0121e78ca,
+        type: 3}
+      propertyPath: handbrakeSteeringRangeModifier
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

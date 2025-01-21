@@ -33,51 +33,65 @@ public class PointsManager : MonoBehaviour
     {
         if (PointsCanBeScored)
         {
-            // If the car is sideways, start drifting
-            if (playerRB.angularVelocity.magnitude > driftAngleMinumim && carControl.isOnGround())
-            {
-                startedDrift = true;
-            }
-
-            // If the car is not sideways ...
-            else
-            {
-                // ... and it has not actually begun drifting
-                // Stop
-                if (startedDrift && !isDrifting)
-                {
-                    startedDrift = false;
-                    driftTime = 0;
-                }
-
-                // ... and it has also already started to drift
-                else if (startedDrift && isDrifting)
-                {
-                    time += Time.deltaTime;
-                    
-                    // stop drifting after not drifting for x seconds
-                    if (time >= timeBeforeStoppingDrift)
-                    {
-                        time = 0;
-                        startedDrift = false;
-                        isDrifting = false;
-                    }
-                }
-            };
-
-            // Start drifting if 
-            if (startedDrift && !isDrifting)
-            {
-                driftTime += Time.deltaTime;
-                if (driftTime >= timeBeforeStartingDrift) isDrifting = true;
-            }
-
-            // Do drifting
-            if (isDrifting) DriftScore();
-            else if (driftScore > 0) ApplyDirftScore();
+            CheckForDrifting();
         }
 
         else if (driftScore > 0) ApplyDirftScore();
+    }
+    private void CheckForDrifting()
+    {
+        // If the car is sideways, start drifting
+        if (GetAngularVelocity() > driftAngleMinumim && carControl.isOnGround())
+        {
+            startedDrift = true;
+        }
+
+        // If the car is not sideways ...
+        else
+        {
+            // ... and it has not actually begun drifting
+            // Stop
+            if (startedDrift && !isDrifting)
+            {
+                startedDrift = false;
+                driftTime = 0;
+            }
+
+            // ... and it has also already started to drift
+            else if (startedDrift && isDrifting)
+            {
+                time += Time.deltaTime;
+
+                // stop drifting after not drifting for x seconds
+                if (time >= timeBeforeStoppingDrift)
+                {
+                    time = 0;
+                    startedDrift = false;
+                    isDrifting = false;
+                }
+            }
+        }
+
+        // Start drifting if 
+        if (startedDrift && !isDrifting)
+        {
+            // the drift is initiated and x seconds have passed
+            driftTime += Time.deltaTime;
+            if (driftTime >= timeBeforeStartingDrift) isDrifting = true;
+        }
+
+        // Do drifting
+        if (isDrifting) DriftScore();
+        else if (driftScore > 0) ApplyDirftScore();
+    }
+    private float GetAngularVelocity()
+    {
+        Vector3 velocity = new Vector3(
+            0,
+            playerRB.velocity.y,
+            0);
+
+        return velocity.magnitude;
     }
     private void ApplyDirftScore()
     {
