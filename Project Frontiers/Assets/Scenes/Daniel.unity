@@ -1949,10 +1949,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3818006407283165148, guid: 460fa5f12be23134da1eadfac08f349e,
+        type: 3}
+      propertyPath: firstCheckpoint
+      value: 
+      objectReference: {fileID: 152259515}
+    - target: {fileID: 5269293457249802334, guid: 460fa5f12be23134da1eadfac08f349e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.286
+      objectReference: {fileID: 0}
     - target: {fileID: 5901932647209218515, guid: 460fa5f12be23134da1eadfac08f349e,
         type: 3}
       propertyPath: duration
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7207342038167547412, guid: 460fa5f12be23134da1eadfac08f349e,
+        type: 3}
+      propertyPath: groundOffSet
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8558618010313887961, guid: 460fa5f12be23134da1eadfac08f349e,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.508
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

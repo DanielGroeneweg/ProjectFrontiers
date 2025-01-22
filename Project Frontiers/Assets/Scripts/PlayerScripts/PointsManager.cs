@@ -76,8 +76,17 @@ public class PointsManager : MonoBehaviour
     }
     private void StopAndStartDrift()
     {
+        // Get the velocity, ignoring the Y Axis
+        Vector3 velocity = playerRB.velocity;
+        velocity.y = 0;
+
+        // Get the forward, ignoring the Y axis
+        Vector3 forward = playerRB.transform.forward;
+        forward.y = 0;
+        forward.Normalize();
+
         // Calculate the angle from the car's velocity direction to the car's face direction
-        float angle = Vector3.Angle(playerRB.transform.forward, (playerRB.velocity + playerRB.transform.forward).normalized);
+        float angle = Vector3.Angle(forward, (velocity + forward).normalized);
 
         // If the car is sideways, start drifting
         if (angle > driftAngleMinumim && carControl.isOnGround())
@@ -175,7 +184,7 @@ public class PointsManager : MonoBehaviour
                 }
                 airTime += 0.02f;
                 airtimeScore = airTime * scoreIncreaseForAirtime;
-                scoreObject.text = "Airtime: +" + airtimeScore.ToString();
+                scoreObject.text = "Airtime: +" + ((int)airtimeScore).ToString();
             }
         }
 
@@ -189,6 +198,7 @@ public class PointsManager : MonoBehaviour
     }
     private void ApplyAirtimeScore()
     {
+        airtimeScore = Mathf.Round(airtimeScore);
         score += airtimeScore;
         scoreDisplay.text = score.ToString();
         airtimeScore = 0;
