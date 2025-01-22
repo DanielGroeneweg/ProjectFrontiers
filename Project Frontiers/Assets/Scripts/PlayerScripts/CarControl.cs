@@ -29,6 +29,7 @@ public class CarControl : MonoBehaviour
     private float hInput;
     private bool handBrake;
     private bool playerControls = true;
+    private float extremumValue;
     #endregion
 
     #region UnityMethods
@@ -36,6 +37,8 @@ public class CarControl : MonoBehaviour
     {
         // Adjust center of mass vertically, to help prevent the car from rolling
         rigidBody.centerOfMass += Vector3.up * centreOfGravityOffset;
+
+        extremumValue = wheels[0].WheelCollider.sidewaysFriction.extremumValue;
 
         // Apply the store upgrades for the car to the car
         ApplyUpgrades();
@@ -57,53 +60,69 @@ public class CarControl : MonoBehaviour
         bool isAccelerating = Mathf.Sign(vInput) == Mathf.Sign(ForwardSpeed());
         if (vInput == 0) isAccelerating = false;
 
+        // For each wheel, create a new wheelcollider and modify that
         foreach (var wheel in wheels)
         {
-            // Apply steering to Wheel colliders that have "Steerable" enabled
-            if (wheel.steerable)
+            // Create a copy of the current wheelcollider
+            WheelCollider collider = wheel.WheelCollider;
+            WheelFrictionCurve curve = collider.sidewaysFriction;
+
+
+            DoSteering(wheel, curve);
+            DoDriving(wheel, isAccelerating);
+
+            // Apply the changes to the wheelcollider
+            collider.sidewaysFriction = curve;
+            wheel.WheelCollider = collider;
+        }
+    }
+    private void DoSteering(WheelControl wheel, WheelFrictionCurve curve)
+    {
+        // Apply steering to Wheel colliders that have "Steerable" enabled
+        if (wheel.steerable)
+        {
+            if (handBrake) curve.extremumValue = extremumValue * handbrakeSteeringRangeModifier;
+
+            else curve.extremumValue = extremumValue;
+
+            wheel.WheelCollider.steerAngle = hInput * CurrentSteerRange();
+        }
+    }
+    private void DoDriving(WheelControl wheel, bool isAccelerating)
+    {
+        if (isAccelerating)
+        {
+            // Apply torque to Wheel colliders that have "Motorized" enabled
+            if (wheel.motorized)
+            {
+                wheel.WheelCollider.motorTorque = vInput * CurrentMotorTorque();
+            }
+            wheel.WheelCollider.brakeTorque = 0;
+        }
+
+        else
+        {
+            // If the user is trying to go in the opposite direction apply brakes to all wheels
+            if (vInput < 0 || vInput > 0)
             {
                 float modifier = 1;
-                if (handBrake)
-                {
-                    modifier = handbrakeSteeringRangeModifier;
-                }
-                wheel.WheelCollider.steerAngle = hInput * CurrentSteerRange() * modifier;
+                if (handBrake) modifier = handbrakeBrakeTorqueModifier;
+                wheel.WheelCollider.brakeTorque = brakeTorque * modifier;
             }
 
-            if (isAccelerating)
+            // Passively slow down the car if the player is not accelerating and not using the handbrake
+            else if (vInput == 0 && !handBrake)
             {
-                // Apply torque to Wheel colliders that have "Motorized" enabled
-                if (wheel.motorized)
-                {
-                    wheel.WheelCollider.motorTorque = vInput * CurrentMotorTorque();
-                }
-                wheel.WheelCollider.brakeTorque = 0;
+                wheel.WheelCollider.brakeTorque = passiveBrakeTorque;
             }
 
-            else
+            // Quickly slow down the car if the player is not acceleation but is using the handbrake
+            else if (vInput == 0 && handBrake)
             {
-                // If the user is trying to go in the opposite direction apply brakes to all wheels
-                if (vInput < 0 || vInput > 0)
-                {
-                    float modifier = 1;
-                    if (handBrake) modifier = handbrakeBrakeTorqueModifier;
-                    wheel.WheelCollider.brakeTorque = brakeTorque * modifier;
-                }
-
-                // Passively slow down the car if the player is not accelerating and not using the handbrake
-                else if (vInput == 0 && !handBrake)
-                {
-                    wheel.WheelCollider.brakeTorque = passiveBrakeTorque;
-                }
-
-                // Quickly slow down the car if the player is not acceleation but is using the handbrake
-                else if (vInput == 0 && handBrake)
-                {
-                    wheel.WheelCollider.brakeTorque = brakeTorque * handbrakeBrakeTorqueModifier;
-                }
-
-                wheel.WheelCollider.motorTorque = 0;
+                wheel.WheelCollider.brakeTorque = brakeTorque * handbrakeBrakeTorqueModifier;
             }
+
+            wheel.WheelCollider.motorTorque = 0;
         }
     }
     #endregion
