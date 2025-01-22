@@ -17,11 +17,13 @@ public class UpgradesManager : MonoBehaviour
     void Start()
     {
         //Upgrades
+        /*
         PlayerPrefs.SetInt("AccelerationTier", 1);
         PlayerPrefs.SetInt("SpoilerTier", 1);
         PlayerPrefs.SetInt("BrakesTier", 1);
         PlayerPrefs.SetInt("EngineTier", 1);
         PlayerPrefs.SetInt("Money", 0);
+        */
     }
     public void UpgradeStat(string upgrade)
     {
