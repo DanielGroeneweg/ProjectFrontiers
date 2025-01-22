@@ -40,8 +40,11 @@ public class PointsManager : MonoBehaviour
     }
     private void CheckForDrifting()
     {
+        // Calculate the angle from the car's velocity direction to the car's face direction
+        float angle = Vector3.Angle(playerRB.transform.forward, (playerRB.velocity + playerRB.transform.forward).normalized);
+        
         // If the car is sideways, start drifting
-        if (GetAngularVelocity() > driftAngleMinumim && carControl.isOnGround())
+        if (angle > driftAngleMinumim && carControl.isOnGround())
         {
             startedDrift = true;
         }
@@ -83,15 +86,6 @@ public class PointsManager : MonoBehaviour
         // Do drifting
         if (isDrifting) DriftScore();
         else if (driftScore > 0) ApplyDirftScore();
-    }
-    private float GetAngularVelocity()
-    {
-        Vector3 velocity = new Vector3(
-            0,
-            playerRB.velocity.y,
-            0);
-
-        return velocity.magnitude;
     }
     private void ApplyDirftScore()
     {
