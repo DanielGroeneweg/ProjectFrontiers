@@ -10,39 +10,61 @@ public class PointsManager : MonoBehaviour
     [SerializeField] private Rigidbody playerRB;
     [SerializeField] private TMP_Text scoreDisplay;
     [SerializeField] private PlayTimer timer;
-    [SerializeField] private TMP_Text driftScorePrefab;
+    [SerializeField] private TMP_Text scorePrefab;
     [SerializeField] private Canvas mainCanvas;
 
-    [Header("Stats")]
+    [Header("Drift Score Stats")]
     [SerializeField] private float scoreIncreaseForDrifting;
     [SerializeField] private float driftAngleMinumim;
-    [SerializeField] private float pointsPerMoney;
-    [SerializeField] private float pointsPerSecondLeft;
     [SerializeField] private float timeBeforeStartingDrift;
     [SerializeField] private float timeBeforeStoppingDrift;
+
+    [Header("Airtime Score Stats")]
+    [SerializeField] private float scoreIncreaseForAirtime;
+    [SerializeField] private float timeBeforeStartingAirtime;
+
+    [Header("Ending Stats")]
+    [SerializeField] private float pointsPerMoney;
+    [SerializeField] private float pointsPerSecondLeft;
 
     // Not In Unity Inspector
     [HideInInspector] public bool isDrifting;
 
     // Internal
+    // General
     private float score;
+    private TMP_Text scoreObject;
+    private bool PointsCanBeScored = true;
+    private bool instantiated = false;
+
+    // Drifting
     private float driftScore;
     private float driftTime;
-    private bool PointsCanBeScored = true;
     private bool startedDrift = false;
     private float time;
-    private TMP_Text driftScoreObject;
-    private bool instantiated = false;
+
+    // Airtime
+    private float airTime;
+    private float airtimeScore;
+    private bool isInAirtime = false;
+    private float airtimeTimer;
     #endregion
 
     private void FixedUpdate()
     {
+        Debug.Log(carControl.isOnGround());
+
         if (PointsCanBeScored)
         {
             CheckForDrifting();
+            CheckForAirtime();
         }
 
-        else if (driftScore > 0) ApplyDirftScore();
+        else
+        {
+            if (driftScore > 0) ApplyDirftScore();
+            if (airTime > 0) ApplyAirtimeScore();
+        }
     }
 
     #region drift- & score-Calculations
@@ -77,7 +99,7 @@ public class PointsManager : MonoBehaviour
             // ... and it has also already started to drift
             else if (startedDrift && isDrifting)
             {
-                time += Time.deltaTime;
+                time += 0.02f;
 
                 // stop drifting after not drifting for x seconds
                 if (time >= timeBeforeStoppingDrift)
@@ -103,7 +125,7 @@ public class PointsManager : MonoBehaviour
         {
             if (!instantiated)
             {
-                driftScoreObject = Instantiate(driftScorePrefab, mainCanvas.transform);
+                scoreObject = Instantiate(scorePrefab, mainCanvas.transform);
                 instantiated = true;
             }
             DriftScore();
@@ -112,7 +134,7 @@ public class PointsManager : MonoBehaviour
         {
             ApplyDirftScore();
             instantiated = false;
-            driftScoreObject.GetComponent<DriftScoreAnimation>().StartAnimation();
+            scoreObject.GetComponent<ScoreDisplayAnimation>().StartAnimation();
         }
     }
     private void ApplyDirftScore()
@@ -124,7 +146,52 @@ public class PointsManager : MonoBehaviour
     private void DriftScore()
     {
         driftScore += scoreIncreaseForDrifting;
-        driftScoreObject.text = driftScore.ToString();
+        scoreObject.text = "Drift: +" + driftScore.ToString();
+    }
+    #endregion
+
+    #region airtime calulations
+    private void CheckForAirtime()
+    {
+        if (!carControl.isOnGround())
+        {
+            if (!isInAirtime)
+            {
+                airtimeTimer += 0.02f;
+
+                if (airtimeTimer < timeBeforeStartingAirtime)
+                {
+                    airtimeTimer = 0;
+                    isInAirtime = true;
+                }
+            }
+
+            if (isInAirtime)
+            {
+                if (!instantiated)
+                {
+                    instantiated = true;
+                    scoreObject = Instantiate(scorePrefab, mainCanvas.transform);
+                }
+                airTime += 0.02f;
+                airtimeScore = airTime * scoreIncreaseForAirtime;
+                scoreObject.text = "Airtime: +" + airtimeScore.ToString();
+            }
+        }
+
+        else if (airTime > 0)
+        {
+            ApplyAirtimeScore();
+            airTime = 0;
+            scoreObject.GetComponent<ScoreDisplayAnimation>().StartAnimation();
+            instantiated = false;
+        }
+    }
+    private void ApplyAirtimeScore()
+    {
+        score += airtimeScore;
+        scoreDisplay.text = score.ToString();
+        airtimeScore = 0;
     }
     #endregion
 

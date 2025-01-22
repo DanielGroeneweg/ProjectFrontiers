@@ -1,10 +1,9 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
-public class DriftScoreAnimation : MonoBehaviour
+public class ScoreDisplayAnimation : MonoBehaviour
 {
     [SerializeField] private TMP_Text scoreText;
-    [SerializeField] private TMP_Text labelText;
     [SerializeField] private float duration;
     [SerializeField] private float moveSpeed;
 
@@ -26,7 +25,6 @@ public class DriftScoreAnimation : MonoBehaviour
             Color color = scoreText.color;
             color.a = 1 - diff * timer;
             scoreText.color = color;
-            labelText.color = color;
 
             // Move text up
             transform.Translate(Vector3.up * moveSpeed * timer);
