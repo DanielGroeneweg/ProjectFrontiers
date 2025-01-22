@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(CarControl))]
@@ -19,9 +18,9 @@ public class AudioLooping : MonoBehaviour
     {
         maxStartLocation = audioClip.clip.length - duration - buffer;
         startLocation = 0;
-        StartCoroutine(DoAudioLoop());
+        StartCoroutine(PlayAudio());
     }
-    private IEnumerator DoAudioLoop()
+    private IEnumerator PlayAudio()
     {
         // Play audio from startlocation
         audioClip.Play();
@@ -31,17 +30,11 @@ public class AudioLooping : MonoBehaviour
         yield return new WaitForSeconds(duration);
         RestartAudio();
     }
-
     private void RestartAudio()
     {
         // Recalculate startlocation, then play sound again
-        StopCoroutine(DoAudioLoop());
+        StopCoroutine(PlayAudio());
         startLocation = maxStartLocation * carControl.SpeedFactor();
-        StartCoroutine(DoAudioLoop());
-    }
-
-    private void Update()
-    {
-        Debug.Log(startLocation);
+        StartCoroutine(PlayAudio());
     }
 }
