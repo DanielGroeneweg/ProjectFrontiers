@@ -17543,7 +17543,7 @@ MonoBehaviour:
           m_StringArgument: EndScene
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1281586325}
         m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
         m_MethodName: ConvertScoreToMoney
         m_Mode: 1
@@ -17594,9 +17594,9 @@ MonoBehaviour:
           m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1281586325}
         m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
-        m_MethodName: DisablePointsGaining
+        m_MethodName: ConvertTimeLeftToScore
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17606,9 +17606,9 @@ MonoBehaviour:
           m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: CarControl, Assembly-CSharp
-        m_MethodName: DisablePlayerControls
+      - m_Target: {fileID: 1281586325}
+        m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
+        m_MethodName: DisablePointsGaining
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17618,9 +17618,9 @@ MonoBehaviour:
           m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PointsManager, Assembly-CSharp
-        m_MethodName: ConvertTimeLeftToScore
+      - m_Target: {fileID: 1281586326}
+        m_TargetAssemblyTypeName: CarControl, Assembly-CSharp
+        m_MethodName: DisablePlayerControls
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -18651,6 +18651,30 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 460fa5f12be23134da1eadfac08f349e, type: 3}
+--- !u!114 &1281586325 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 561089195285286594, guid: 460fa5f12be23134da1eadfac08f349e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1281586324}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f37504d32172a0541aa3add5e1399247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1281586326 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7207342038167547412, guid: 460fa5f12be23134da1eadfac08f349e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1281586324}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4fb90cb014b0094b8b3a59f75547bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1300559606
 GameObject:
   m_ObjectHideFlags: 0
