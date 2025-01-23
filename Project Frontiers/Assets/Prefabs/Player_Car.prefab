@@ -503,14 +503,17 @@ MonoBehaviour:
   carControl: {fileID: 7207342038167547412}
   playerRB: {fileID: 5630014036890408200}
   scoreDisplay: {fileID: 0}
-  driftScoreDisplay: {fileID: 0}
   timer: {fileID: 0}
+  scorePrefab: {fileID: 0}
+  mainCanvas: {fileID: 0}
   scoreIncreaseForDrifting: 10
   driftAngleMinumim: 15
-  pointsPerMoney: 100
-  pointsPerSecondLeft: 10
   timeBeforeStartingDrift: 0.2
   timeBeforeStoppingDrift: 0.5
+  scoreIncreaseForAirtime: 100
+  timeBeforeStartingAirtime: 0.2
+  pointsPerMoney: 100
+  pointsPerSecondLeft: 10
   isDrifting: 0
 --- !u!114 &3818006407283165148
 MonoBehaviour:
