@@ -78,6 +78,9 @@ public class PointsManager : MonoBehaviour
     {
         // Get the velocity, ignoring the Y Axis
         Vector3 velocity = playerRB.velocity;
+
+        velocity *= Mathf.Sign(carControl.ForwardSpeed());
+
         velocity.y = 0;
 
         // Get the forward, ignoring the Y axis
