@@ -52,8 +52,6 @@ public class PointsManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Debug.Log(carControl.isOnGround());
-
         if (PointsCanBeScored)
         {
             CheckForDrifting();

@@ -4,6 +4,10 @@ public class CheckpointManager : MonoBehaviour
     [SerializeField] private Rigidbody rb;
     [SerializeField] private Transform firstCheckpoint;
     private Transform savedCheckPoint;
+    private void Start()
+    {
+        savedCheckPoint = firstCheckpoint;
+    }
     private void Update()
     {
         if (Input.GetKey(KeyCode.R))
