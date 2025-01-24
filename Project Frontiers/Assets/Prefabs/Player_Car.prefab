@@ -1217,10 +1217,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointsManager: {fileID: 561089195285286594}
   particles:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 9030930115468251215}
+  - {fileID: 5866869455259300118}
 --- !u!82 &8558618010313887961
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3931,6 +3929,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6655179778136539235}
   m_PrefabAsset: {fileID: 0}
+--- !u!198 &9030930115468251215 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2382331261246885932, guid: 26f74fe13ac39c94798ac15e4eda1084,
+    type: 3}
+  m_PrefabInstance: {fileID: 6655179778136539235}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8098865243251024186
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4002,6 +4006,12 @@ PrefabInstance:
 --- !u!4 &2908472362357778954 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6356843189296188208, guid: 26f74fe13ac39c94798ac15e4eda1084,
+    type: 3}
+  m_PrefabInstance: {fileID: 8098865243251024186}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &5866869455259300118 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 2382331261246885932, guid: 26f74fe13ac39c94798ac15e4eda1084,
     type: 3}
   m_PrefabInstance: {fileID: 8098865243251024186}
   m_PrefabAsset: {fileID: 0}
