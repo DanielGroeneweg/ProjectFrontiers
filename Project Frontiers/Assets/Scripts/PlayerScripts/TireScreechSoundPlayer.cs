@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(PointsManager))]
 public class TireScreechSoundPlayer : MonoBehaviour
 {
-    [SerializeField] private AudioSource audioClip;
+    [SerializeField] private GameObject tireScreechAudioObject;
     [SerializeField] private PointsManager pointsManager;
 
     bool tireScreechFlag = false;
@@ -13,7 +13,7 @@ public class TireScreechSoundPlayer : MonoBehaviour
         {
             if (tireScreechFlag) return;
 
-            audioClip.Play();
+            tireScreechAudioObject.SetActive(true);
             tireScreechFlag = true;
         }
 
@@ -21,7 +21,7 @@ public class TireScreechSoundPlayer : MonoBehaviour
         {
             if (!tireScreechFlag) return;
 
-            audioClip.Stop();
+            tireScreechAudioObject.SetActive(false);
             tireScreechFlag = false;
         }
     }
