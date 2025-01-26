@@ -1260,11 +1260,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -1418592497
-      Data2: 1268846834
-      Data3: 1705331334
-      Data4: 837622361
-    Path: event:/TireScreech
+      Data1: 860934727
+      Data2: 1310371113
+      Data3: 1770491547
+      Data4: 55119768
+    Path: event:/TireScreeching
   Event: 
   EventPlayTrigger: 11
   EventStopTrigger: 12
@@ -1517,11 +1517,11 @@ MonoBehaviour:
   CollisionTag: 
   EventReference:
     Guid:
-      Data1: -497038535
-      Data2: 1292688503
-      Data3: 554492290
-      Data4: 962883819
-    Path: event:/NoName
+      Data1: -422560677
+      Data2: 1106984143
+      Data3: -411765075
+      Data4: 735732539
+    Path: event:/Engine
   Event: 
   EventPlayTrigger: 11
   EventStopTrigger: 12
@@ -1530,7 +1530,7 @@ MonoBehaviour:
   Preload: 0
   NonRigidbodyVelocity: 0
   Params:
-  - Name: RPM_Or_Sum
+  - Name: Speed
     Value: 0
   OverrideAttenuation: 0
   OverrideMinDistance: 1
@@ -1549,7 +1549,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carControl: {fileID: 7754905757898876149}
   emitter: {fileID: 1183544350}
-  parameters: []
+  parameterName: Speed
 --- !u!1 &1200240896
 GameObject:
   m_ObjectHideFlags: 0

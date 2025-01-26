@@ -1,33 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8856230308359009985
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/TireScreech
-  m_EditorClassIdentifier: 
-  Path: event:/TireScreech
-  Guid:
-    Data1: -1418592497
-    Data2: 1268846834
-    Data3: 1705331334
-    Data4: 837622361
-  Banks:
-  - {fileID: 5517284960013870109}
-  IsStream: 0
-  Is3D: 1
-  IsOneShot: 0
-  Parameters: []
-  MinDistance: 1
-  MaxDistance: 20
-  Length: 1644
---- !u!114 &-8280020172097889594
+--- !u!114 &-7145666774790531148
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.strings.bank
   m_EditorClassIdentifier: 
-  Path: ../../../../../Documents/FMOD Studio/ProjectFrontiersFirstTry/Build/Desktop/Master.strings.bank
+  Path: Assets/FMOD/ProjectFrontiers/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638735099063218802
+  lastModified: 638735194197763602
   FileSizes:
   - Name: Desktop
-    Value: 910
+    Value: 860
   Exists: 1
---- !u!114 &-2670636197871264747
+--- !u!114 &-1825387633243796530
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57,21 +30,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
-  m_Name: event:/NoName
+  m_Name: event:/Engine
   m_EditorClassIdentifier: 
-  Path: event:/NoName
+  Path: event:/Engine
   Guid:
-    Data1: -497038535
-    Data2: 1292688503
-    Data3: 554492290
-    Data4: 962883819
+    Data1: -422560677
+    Data2: 1106984143
+    Data3: -411765075
+    Data4: 735732539
   Banks:
-  - {fileID: 5517284960013870109}
+  - {fileID: 7090834541328968488}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 7447170781717334965}
+  - {fileID: 3783950324720969309}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -88,19 +61,70 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -8280020172097889594}
-  - {fileID: 5517284960013870109}
+  - {fileID: -7145666774790531148}
+  - {fileID: 7090834541328968488}
   EditorEvents:
-  - {fileID: -2670636197871264747}
-  - {fileID: -8856230308359009985}
+  - {fileID: 3473263526852727348}
+  - {fileID: -1825387633243796530}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5517284960013870109}
+  - {fileID: 7090834541328968488}
   StringsBanks:
-  - {fileID: -8280020172097889594}
-  cacheTime: 638735099063218802
+  - {fileID: -7145666774790531148}
+  cacheTime: 638735194197763602
   cacheVersion: 131622
---- !u!114 &5517284960013870109
+--- !u!114 &3473263526852727348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/TireScreeching
+  m_EditorClassIdentifier: 
+  Path: event:/TireScreeching
+  Guid:
+    Data1: 860934727
+    Data2: 1310371113
+    Data3: 1770491547
+    Data4: 55119768
+  Banks:
+  - {fileID: 7090834541328968488}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1644
+--- !u!114 &3783950324720969309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Engine/Speed
+  m_EditorClassIdentifier: 
+  Name: Speed
+  StudioPath: 
+  Min: 0
+  Max: 20
+  Default: 0
+  ID:
+    data1: 3001991436
+    data2: 1823558945
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7090834541328968488
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,35 +136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: bank:/Master.bank
   m_EditorClassIdentifier: 
-  Path: ../../../../../Documents/FMOD Studio/ProjectFrontiersFirstTry/Build/Desktop/Master.bank
+  Path: Assets/FMOD/ProjectFrontiers/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638735099063188779
+  lastModified: 638735194197717502
   FileSizes:
   - Name: Desktop
-    Value: 62144
-  Exists: 1
---- !u!114 &7447170781717334965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
-  m_Name: parameter:/NoName/RPM_Or_Sum
-  m_EditorClassIdentifier: 
-  Name: RPM_Or_Sum
-  StudioPath: 
-  Min: 0
-  Max: 20
-  Default: 0
-  ID:
-    data1: 620588326
-    data2: 2268609299
-  Type: 0
-  IsGlobal: 0
-  Labels: []
+    Value: 61824
   Exists: 1
