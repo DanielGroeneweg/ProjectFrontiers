@@ -8,20 +8,22 @@ public class FMOD_EngineSoundScript : MonoBehaviour
 {
     [SerializeField] private CarControl carControl;
     [SerializeField] private StudioEventEmitter[] sounds;
-
-    private float diff;
-    private void Start()
-    {
-       diff =  carControl.maxSpeed/sounds.Length;
-    }
     private void Update()
     {
         float speed = Mathf.Floor(Mathf.Abs(Mathf.Clamp(carControl.ForwardSpeed(), 0, carControl.maxSpeed)));
 
-        for (int i = 0; i < sounds.Length; i++)
+        Debug.Log(speed);
+
+        if (speed == 0)
         {
-            if (speed == diff * i) sounds[i].gameObject.SetActive(true);
-            else sounds[i].gameObject.SetActive(false);
+            sounds[0].gameObject.SetActive(true);
+            return;
+        }
+
+        for (int i = 1; i <= sounds.Length; i++)
+        {
+            if (speed == i) sounds[i-1].gameObject.SetActive(true);
+            else sounds[i-1].gameObject.SetActive(false);
         }
     }
 }
