@@ -1566,6 +1566,18 @@ MonoBehaviour:
           m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8699977222073862223}
+        m_TargetAssemblyTypeName: CheckpointManager, Assembly-CSharp
+        m_MethodName: DisableResetting
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: StartMenu
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1200240902}
         m_TargetAssemblyTypeName: WaitScript, Assembly-CSharp
         m_MethodName: StartWaiting
@@ -1996,6 +2008,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9233c859234374a41a470acfc3e78396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8699977222073862223 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3778434647746659133, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+    type: 3}
+  m_PrefabInstance: {fileID: 2992804617835072158}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4373461323098164003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c64d7ab30bf64aa448032ccb7a257d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
