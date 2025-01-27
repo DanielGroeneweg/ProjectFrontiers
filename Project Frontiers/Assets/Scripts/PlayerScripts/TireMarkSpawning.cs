@@ -1,12 +1,13 @@
+using Unity.VisualScripting;
 using UnityEngine;
 [RequireComponent(typeof(PointsManager))]
 public class TireMarkSpawning : MonoBehaviour
 {
     [SerializeField] private PointsManager pointsManager;
-    [SerializeField] private TrailRenderer[] tireMarks;
+    public TrailRenderer[] tireMarks;
 
     // Internal
-    private bool tireMarksFlags = false;
+    [DoNotSerialize] public bool tireMarksFlags = false;
     private void Update()
     {
         if (pointsManager.isDrifting) StartEmitter();
