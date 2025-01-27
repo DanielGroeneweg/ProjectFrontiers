@@ -7,17 +7,21 @@ using UnityEngine;
 public class FMOD_EngineSoundScript : MonoBehaviour
 {
     [SerializeField] private CarControl carControl;
-    [SerializeField] private StudioEventEmitter emitter;
-    [SerializeField] private string parameterName;
+    [SerializeField] private StudioEventEmitter[] sounds;
 
+    private float diff;
+    private void Start()
+    {
+       diff =  carControl.maxSpeed/sounds.Length;
+    }
     private void Update()
     {
-        foreach (ParamRef param in emitter.Params)
+        float speed = Mathf.Floor(Mathf.Abs(Mathf.Clamp(carControl.ForwardSpeed(), 0, carControl.maxSpeed)));
+
+        for (int i = 0; i < sounds.Length; i++)
         {
-            if (param.Name == parameterName)
-            {
-                param.Value = Mathf.Clamp(Mathf.Abs(carControl.ForwardSpeed()), 0, 20);
-            }
+            if (speed == diff * i) sounds[i].gameObject.SetActive(true);
+            else sounds[i].gameObject.SetActive(false);
         }
     }
 }

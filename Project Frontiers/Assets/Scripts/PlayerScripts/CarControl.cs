@@ -8,10 +8,10 @@ public class CarControl : MonoBehaviour
     [SerializeField] private Rigidbody rigidBody;
 
     [Header("Stats")]
+    public float maxSpeed = 20;
     [SerializeField] private float motorTorque = 2000;
     [SerializeField] private float brakeTorque = 2000;
     [SerializeField] private float passiveBrakeTorque = 500;
-    [SerializeField] private float maxSpeed = 20;
     [SerializeField] private float steeringRange = 30;
     [SerializeField] private float steeringRangeAtMaxSpeed = 10;
     [SerializeField] private float centreOfGravityOffset = -1f;
