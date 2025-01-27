@@ -1108,6 +1108,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &983430515 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7518192896152691725, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+    type: 3}
+  m_PrefabInstance: {fileID: 2992804617835072158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1024004563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1578,6 +1584,42 @@ MonoBehaviour:
           m_StringArgument: StartMenu
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 8699977222073862219}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: StartMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 983430515}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: StartMenu
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1319747941}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 5
+          m_StringArgument: StartMenu
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1200240902}
         m_TargetAssemblyTypeName: WaitScript, Assembly-CSharp
         m_MethodName: StartWaiting
@@ -1647,6 +1689,12 @@ MonoBehaviour:
           m_StringArgument: EndScene
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &1319747941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8986093049655265618, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+    type: 3}
+  m_PrefabInstance: {fileID: 2992804617835072158}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1846901234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1996,6 +2044,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4fb90cb014b0094b8b3a59f75547bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8699977222073862219 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6718221082078145295, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+    type: 3}
+  m_PrefabInstance: {fileID: 2992804617835072158}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4373461323098164003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60aa8e3a87cc32441bbb0c90ed2621aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &8699977222073862222 stripped
