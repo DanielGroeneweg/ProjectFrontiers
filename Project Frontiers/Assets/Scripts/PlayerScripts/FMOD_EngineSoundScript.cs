@@ -17,6 +17,7 @@ public class FMOD_EngineSoundScript : MonoBehaviour
         if (speed == 0)
         {
             sounds[0].gameObject.SetActive(true);
+            sounds[19].gameObject.SetActive(false);
             return;
         }
 

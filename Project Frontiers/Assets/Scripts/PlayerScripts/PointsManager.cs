@@ -93,6 +93,14 @@ public class PointsManager : MonoBehaviour
             startedDrift = true;
         }
 
+        else if (!carControl.isOnGround())
+        {
+            startedDrift = false;
+            isDrifting = false;
+            time = 0;
+            driftTime = 0;
+        }
+
         // If the car is not sideways ...
         else
         {
@@ -123,7 +131,7 @@ public class PointsManager : MonoBehaviour
         if (startedDrift && !isDrifting)
         {
             // the drift is initiated and x seconds have passed
-            driftTime += Time.deltaTime;
+            driftTime += 0.02f;
             if (driftTime >= timeBeforeStartingDrift) isDrifting = true;
         }
     }
@@ -222,4 +230,11 @@ public class PointsManager : MonoBehaviour
         PointsCanBeScored = false;
     }
     #endregion
+
+    public void StopOnRespawn()
+    {
+        DoDrifting();
+        isDrifting = false;
+        isInAirtime = false;
+    }
 }

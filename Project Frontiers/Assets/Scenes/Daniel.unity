@@ -1924,9 +1924,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3778434647746659133, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
         type: 3}
+      propertyPath: carControl
+      value: 
+      objectReference: {fileID: 8699977222073862217}
+    - target: {fileID: 3778434647746659133, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
+      propertyPath: pointsManager
+      value: 
+      objectReference: {fileID: 1977216523651950751}
+    - target: {fileID: 3778434647746659133, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
       propertyPath: firstCheckpoint
       value: 
       objectReference: {fileID: 152259515}
+    - target: {fileID: 3778434647746659133, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
+      propertyPath: tireMarkSpawning
+      value: 
+      objectReference: {fileID: 8699977222073862222}
     - target: {fileID: 8047035548056936932, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
         type: 3}
       propertyPath: timer
@@ -1969,6 +1984,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b4fb90cb014b0094b8b3a59f75547bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8699977222073862222 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 59584123573157454, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+    type: 3}
+  m_PrefabInstance: {fileID: 2992804617835072158}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4373461323098164003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9233c859234374a41a470acfc3e78396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
