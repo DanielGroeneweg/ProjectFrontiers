@@ -9,7 +9,7 @@ public class CheckpointManager : MonoBehaviour
 
     // Internal
     private Transform savedCheckPoint;
-    private bool canReset;
+    private bool canReset = true;
     private void Start()
     {
         savedCheckPoint = firstCheckpoint;
