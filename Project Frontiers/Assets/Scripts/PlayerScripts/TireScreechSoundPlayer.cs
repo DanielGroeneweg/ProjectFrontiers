@@ -1,5 +1,4 @@
 using UnityEngine;
-[RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(PointsManager))]
 public class TireScreechSoundPlayer : MonoBehaviour
 {
