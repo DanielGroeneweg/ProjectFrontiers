@@ -224,6 +224,7 @@ public class PointsManager : MonoBehaviour
         PlayerPrefs.SetInt("Money", PlayerPrefs.GetInt("Money") + Mathf.FloorToInt(score / pointsPerMoney));
         PlayerPrefs.SetInt("Score", (int)score);
         PlayerPrefs.SetInt("ScoreToMoney", Mathf.FloorToInt(score / pointsPerMoney));
+        PlayerPrefs.SetInt("HighScore", (int)Mathf.Max(score, PlayerPrefs.GetInt("HighScore")));
     }
     public void DisablePointsGaining()
     {
