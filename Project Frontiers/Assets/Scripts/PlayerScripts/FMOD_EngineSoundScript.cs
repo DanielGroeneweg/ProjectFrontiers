@@ -12,8 +12,6 @@ public class FMOD_EngineSoundScript : MonoBehaviour
     {
         float speed = Mathf.Floor(Mathf.Abs(Mathf.Clamp(carControl.ForwardSpeed(), 0, carControl.maxSpeed)));
 
-        Debug.Log(speed);
-
         if (speed == 0)
         {
             sounds[0].gameObject.SetActive(true);

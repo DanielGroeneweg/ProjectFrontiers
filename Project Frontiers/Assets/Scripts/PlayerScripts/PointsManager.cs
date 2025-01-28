@@ -161,7 +161,7 @@ public class PointsManager : MonoBehaviour
         score += driftScore;
         scoreSinceLastCheckpoint += driftScore;
         driftScore = 0;
-        fillImage.fillAmount = (1f / 99999f) * score;
+        fillImage.fillAmount = (1f / 50000f) * score;
         scoreDisplayText.text = score.ToString();
     }
     private void DriftScore()

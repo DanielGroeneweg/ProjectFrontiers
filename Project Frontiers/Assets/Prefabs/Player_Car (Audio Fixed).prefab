@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 7812780357731722124}
   - component: {fileID: 5502925714398070546}
   - component: {fileID: 2891795576089025222}
+  - component: {fileID: -4112246471424943174}
   m_Layer: 0
   m_Name: Player_Car (Audio Fixed)
   m_TagString: Untagged
@@ -278,7 +279,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   carControl: {fileID: 7565636494215649833}
   playerRB: {fileID: 6130638529911672875}
-  scoreDisplay: {fileID: 0}
+  scoreDisplayText: {fileID: 0}
+  fillImage: {fileID: 0}
   timer: {fileID: 0}
   scorePrefab: {fileID: 9033602129689638234, guid: 00ef4eca1f2d48644afa7035b20fc145,
     type: 3}
@@ -309,6 +311,7 @@ MonoBehaviour:
   pointsManager: {fileID: 8047035548056936932}
   carControl: {fileID: 7565636494215649833}
   tireMarkSpawning: {fileID: 59584123573157454}
+  progressIndicator: {fileID: 0}
 --- !u!114 &59584123573157454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -420,7 +423,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fillImage: {fileID: 0}
+  speedText: {fileID: 0}
   carControl: {fileID: 7565636494215649833}
+  maxSpeedInKMH: 150
+--- !u!114 &-4112246471424943174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440177481299680495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7eb99bc07bce89c4284ad90f50b427bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpoints: []
+  images: []
+  carImage: {fileID: 0}
 --- !u!1 &465629532976998527
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class CheckpointManager : MonoBehaviour
     [SerializeField] private PointsManager pointsManager;
     [SerializeField] private CarControl carControl;
     [SerializeField] private TireMarkSpawning tireMarkSpawning;
+    [SerializeField] private ProgressIndicator progressIndicator;
 
     // Internal
     private Transform savedCheckPoint;
@@ -21,6 +22,7 @@ public class CheckpointManager : MonoBehaviour
             ResetToLastCheckpoint();
             pointsManager.StopOnRespawn();
             pointsManager.ResetToLastCheckpoint();
+            progressIndicator.Respawn(savedCheckPoint);
         }
     }
     private void OnTriggerEnter(Collider other)
