@@ -37088,7 +37088,7 @@ PrefabInstance:
         type: 3}
       propertyPath: scoreDisplay
       value: 
-      objectReference: {fileID: 2031214843}
+      objectReference: {fileID: 0}
     - target: {fileID: 8047035548056936932, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
         type: 3}
       propertyPath: scoreDisplayText
@@ -38928,18 +38928,6 @@ MonoBehaviour:
   markerStartUVY: 0.7558689
   customPoints: []
   handleObject: {fileID: 0}
---- !u!114 &2031214843 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 496025078882632363, guid: d65e79a4d19f6bd489f22a3a54491413,
-    type: 3}
-  m_PrefabInstance: {fileID: 1609179708620620137}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2035653031 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8777553338991424594, guid: d65e79a4d19f6bd489f22a3a54491413,
@@ -39514,6 +39502,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1300559607}
     m_Modifications:
+    - target: {fileID: 2473594751117736169, guid: d65e79a4d19f6bd489f22a3a54491413,
+        type: 3}
+      propertyPath: m_FillAmount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924926694332697290, guid: d65e79a4d19f6bd489f22a3a54491413,
+        type: 3}
+      propertyPath: startMinutes
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4924926694332697290, guid: d65e79a4d19f6bd489f22a3a54491413,
+        type: 3}
+      propertyPath: startSeconds
+      value: 11
+      objectReference: {fileID: 0}
     - target: {fileID: 7933626980825686295, guid: d65e79a4d19f6bd489f22a3a54491413,
         type: 3}
       propertyPath: m_Pivot.x
