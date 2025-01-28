@@ -164,7 +164,6 @@ public class PointsManager : MonoBehaviour
     private void DriftScore()
     {
         driftScore += scoreIncreaseForDrifting;
-        scoreSinceLastCheckpoint = driftScore + airtimeScore;
         scoreObject.text = "Drift: +" + driftScore.ToString();
     }
     #endregion
