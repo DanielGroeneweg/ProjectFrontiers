@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 [RequireComponent(typeof(Rigidbody))]
 public class PointsManager : MonoBehaviour
 {
@@ -8,7 +9,8 @@ public class PointsManager : MonoBehaviour
     [Header("Required Components")]
     [SerializeField] private CarControl carControl;
     [SerializeField] private Rigidbody playerRB;
-    [SerializeField] private TMP_Text scoreDisplay;
+    [SerializeField] private TMP_Text scoreDisplayText;
+    [SerializeField] private Image fillImage;
     [SerializeField] private PlayTimer timer;
     [SerializeField] private TMP_Text scorePrefab;
     [SerializeField] private Canvas mainCanvas;
@@ -159,7 +161,8 @@ public class PointsManager : MonoBehaviour
         score += driftScore;
         scoreSinceLastCheckpoint += driftScore;
         driftScore = 0;
-        scoreDisplay.text = score.ToString();
+        fillImage.fillAmount = (1f / 99999f) * score;
+        scoreDisplayText.text = score.ToString();
     }
     private void DriftScore()
     {
@@ -209,7 +212,8 @@ public class PointsManager : MonoBehaviour
     {
         score += Mathf.Round(airtimeScore);
         scoreSinceLastCheckpoint += airtimeScore;
-        scoreDisplay.text = score.ToString();
+        fillImage.fillAmount = (1f / 99999f) * score;
+        scoreDisplayText.text = score.ToString();
         airtimeScore = 0;
     }
     #endregion
@@ -248,6 +252,7 @@ public class PointsManager : MonoBehaviour
     {
         score -= scoreSinceLastCheckpoint;
         scoreSinceLastCheckpoint = 0;
-        scoreDisplay.text = score.ToString();
+        fillImage.fillAmount = (1f / 99999f) * score;
+        scoreDisplayText.text = score.ToString();
     }
 }
