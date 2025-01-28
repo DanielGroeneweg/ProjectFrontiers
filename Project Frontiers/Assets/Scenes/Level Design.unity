@@ -37127,6 +37127,26 @@ PrefabInstance:
       propertyPath: firstCheckpoint
       value: 
       objectReference: {fileID: 1421540821}
+    - target: {fileID: 5479895603886298446, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
+      propertyPath: Preload
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479895603886298446, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
+      propertyPath: TriggerOnce
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479895603886298446, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
+      propertyPath: AllowFadeout
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5479895603886298446, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
+      propertyPath: NonRigidbodyVelocity
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5502925714398070546, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
         type: 3}
       propertyPath: respawnText
