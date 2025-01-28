@@ -36,6 +36,7 @@ public class PointsManager : MonoBehaviour
     private TMP_Text scoreObject;
     private bool PointsCanBeScored = true;
     private bool instantiated = false;
+    private float scoreSinceLastCheckpoint = 0;
 
     // Drifting
     private float driftScore;
@@ -156,12 +157,14 @@ public class PointsManager : MonoBehaviour
     private void ApplyDirftScore()
     {
         score += driftScore;
+        scoreSinceLastCheckpoint += driftScore;
         driftScore = 0;
         scoreDisplay.text = score.ToString();
     }
     private void DriftScore()
     {
         driftScore += scoreIncreaseForDrifting;
+        scoreSinceLastCheckpoint = driftScore + airtimeScore;
         scoreObject.text = "Drift: +" + driftScore.ToString();
     }
     #endregion
@@ -205,8 +208,8 @@ public class PointsManager : MonoBehaviour
     }
     private void ApplyAirtimeScore()
     {
-        airtimeScore = Mathf.Round(airtimeScore);
-        score += airtimeScore;
+        score += Mathf.Round(airtimeScore);
+        scoreSinceLastCheckpoint += airtimeScore;
         scoreDisplay.text = score.ToString();
         airtimeScore = 0;
     }
@@ -237,5 +240,15 @@ public class PointsManager : MonoBehaviour
         DoDrifting();
         isDrifting = false;
         isInAirtime = false;
+    }
+    public void NewCheckpoint()
+    {
+        scoreSinceLastCheckpoint = 0;
+    }
+    public void ResetToLastCheckpoint()
+    {
+        score -= scoreSinceLastCheckpoint;
+        scoreSinceLastCheckpoint = 0;
+        scoreDisplay.text = score.ToString();
     }
 }

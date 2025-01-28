@@ -155,6 +155,7 @@ GameObject:
   - component: {fileID: 3750636192343265727}
   - component: {fileID: 6718221082078145295}
   - component: {fileID: 7812780357731722124}
+  - component: {fileID: 5502925714398070546}
   m_Layer: 0
   m_Name: Player_Car (Audio Fixed)
   m_TagString: Untagged
@@ -487,6 +488,21 @@ MonoBehaviour:
   - {fileID: 8222485387919029636}
   - {fileID: 1153860879322886364}
   - {fileID: 3414983592054274691}
+--- !u!114 &5502925714398070546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440177481299680495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad215f8d4da49874c9df59c47195355e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  respawnText: {fileID: 0}
+  carControl: {fileID: 7565636494215649833}
+  timeBeforeShowingText: 1.5
 --- !u!1 &465629532976998527
 GameObject:
   m_ObjectHideFlags: 0

@@ -20,6 +20,7 @@ public class CheckpointManager : MonoBehaviour
         {
             ResetToLastCheckpoint();
             pointsManager.StopOnRespawn();
+            pointsManager.ResetToLastCheckpoint();
         }
     }
     private void OnTriggerEnter(Collider other)
@@ -27,6 +28,7 @@ public class CheckpointManager : MonoBehaviour
         if (other.tag == "Checkpoint")
         {
             SetCheckPoint(other.transform);
+            pointsManager.NewCheckpoint();
         }
     }
     private void SetCheckPoint(Transform checkpoint)

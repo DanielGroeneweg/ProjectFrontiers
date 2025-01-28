@@ -18563,6 +18563,17 @@ PrefabInstance:
       objectReference: {fileID: 134512175}
     - target: {fileID: 561089195285286594, guid: 460fa5f12be23134da1eadfac08f349e,
         type: 3}
+      propertyPath: mainCanvas
+      value: 
+      objectReference: {fileID: 359528081}
+    - target: {fileID: 561089195285286594, guid: 460fa5f12be23134da1eadfac08f349e,
+        type: 3}
+      propertyPath: scorePrefab
+      value: 
+      objectReference: {fileID: 9033602129689638234, guid: 00ef4eca1f2d48644afa7035b20fc145,
+        type: 3}
+    - target: {fileID: 561089195285286594, guid: 460fa5f12be23134da1eadfac08f349e,
+        type: 3}
       propertyPath: scoreDisplay
       value: 
       objectReference: {fileID: 2031214843}
@@ -18628,9 +18639,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3818006407283165148, guid: 460fa5f12be23134da1eadfac08f349e,
         type: 3}
+      propertyPath: carControl
+      value: 
+      objectReference: {fileID: 1281586326}
+    - target: {fileID: 3818006407283165148, guid: 460fa5f12be23134da1eadfac08f349e,
+        type: 3}
+      propertyPath: pointsManager
+      value: 
+      objectReference: {fileID: 1281586325}
+    - target: {fileID: 3818006407283165148, guid: 460fa5f12be23134da1eadfac08f349e,
+        type: 3}
       propertyPath: firstCheckpoint
       value: 
       objectReference: {fileID: 1421540821}
+    - target: {fileID: 3818006407283165148, guid: 460fa5f12be23134da1eadfac08f349e,
+        type: 3}
+      propertyPath: tireMarkSpawning
+      value: 
+      objectReference: {fileID: 1986534901}
     - target: {fileID: 6804923850904937811, guid: 460fa5f12be23134da1eadfac08f349e,
         type: 3}
       propertyPath: m_Size.z
@@ -18646,7 +18672,9 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.0002844715
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8558618010313887961, guid: 460fa5f12be23134da1eadfac08f349e, type: 3}
+    - {fileID: 5901932647209218515, guid: 460fa5f12be23134da1eadfac08f349e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -19018,7 +19046,7 @@ GameObject:
   - component: {fileID: 1369894296}
   m_Layer: 0
   m_Name: Terrain
-  m_TagString: Untagged
+  m_TagString: Road
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 2147483647
@@ -22448,6 +22476,18 @@ MonoBehaviour:
   markerStartUVY: 0.5963211
   customPoints: []
   handleObject: {fileID: 0}
+--- !u!114 &1986534901 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 351220440214006630, guid: 460fa5f12be23134da1eadfac08f349e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1281586324}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9233c859234374a41a470acfc3e78396, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &2002558421
 MonoBehaviour:
   m_ObjectHideFlags: 0
