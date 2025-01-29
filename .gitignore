@@ -75,9 +75,12 @@ crashlytics-build.properties
 #Fuck this shit I'm out
 Project Frontiers/Library
 Project Frontiers/obj
-Project Frontiers/Logs
+Project Frontiers/Log
 Project Frontiers/UserSettings
 Project Frontiers/Temp
 Project Frontiers/Build
+Project Frontiers/Assets/Plugins/FMOD/Cache/Editor/
+*.log
+Project Frontiers/fmod_editor.log
 
 Project Frontiers/fmod_editor.log

@@ -58,10 +58,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 2bee4142fdece27419a70ae711a787cf,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f526303623b36c4592f903afe57ddfd, type: 2}
     - target: {fileID: 919132149155446097, guid: 2bee4142fdece27419a70ae711a787cf,
         type: 3}
       propertyPath: m_Name
-      value: PJF_mazda_rx7_v2
+      value: Mazda_RX7_Final
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
