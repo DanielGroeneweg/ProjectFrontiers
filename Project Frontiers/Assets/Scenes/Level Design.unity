@@ -41677,6 +41677,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1449012007034242657, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1955816736148444838, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2847499107718629006, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -41782,6 +41792,11 @@ PrefabInstance:
       propertyPath: scoreDisplayText
       value: 
       objectReference: {fileID: 8112950190774151979}
+    - target: {fileID: 8172743226997693353, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 4f526303623b36c4592f903afe57ddfd, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -46963,7 +46978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 727086e7da5c460458f812d2313f2158, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speedBoostAmount: 25000
+  speedBoostAmount: 1000000
 --- !u!224 &7619740226276037861
 RectTransform:
   m_ObjectHideFlags: 0
