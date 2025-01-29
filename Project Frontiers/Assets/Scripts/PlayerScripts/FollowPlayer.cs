@@ -1,20 +1,21 @@
 using UnityEngine;
 public class FollowPlayer : MonoBehaviour
 {
-    [SerializeField] private Transform playerCar;
-
     // Internal
-    private Vector3 oldPosition;
+    private Vector3 oldAngles;
     private void Start()
     {
-        oldPosition = playerCar.position;
+        oldAngles = transform.localEulerAngles;
     }
     private void Update()
     {
-        Vector3 movementChange = playerCar.position - oldPosition;
+        Vector3 rotationChange = transform.localEulerAngles - oldAngles;
 
-        transform.position += movementChange;
+        transform.localEulerAngles = new Vector3(
+            transform.localEulerAngles.x - rotationChange.x,
+            transform.localEulerAngles.y,
+            transform.localEulerAngles.z - rotationChange.z);
 
-        oldPosition = playerCar.position;
+        oldAngles = transform.localEulerAngles;
     }
 }

@@ -17,8 +17,9 @@ public class UpgradesManager : MonoBehaviour
     void Start()
     {
         //Upgrades
+        PlayerPrefs.SetInt("SpoilerTier", 0);
+        PlayerPrefs.SetInt("HoodTier", 0);
         PlayerPrefs.SetInt("AccelerationTier", 1);
-        PlayerPrefs.SetInt("SpoilerTier", 1);
         PlayerPrefs.SetInt("BrakesTier", 1);
         PlayerPrefs.SetInt("EngineTier", 1);
         PlayerPrefs.SetInt("Money", 0);

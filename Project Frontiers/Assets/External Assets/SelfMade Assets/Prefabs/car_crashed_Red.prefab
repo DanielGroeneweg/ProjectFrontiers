@@ -11,17 +11,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 78095bcb3f4c3ef4aa3b2ea73e6acfea,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 67.60318
+      value: 16.596554
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78095bcb3f4c3ef4aa3b2ea73e6acfea,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -2.6415353
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78095bcb3f4c3ef4aa3b2ea73e6acfea,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 20.868465
+      value: -9.159988
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78095bcb3f4c3ef4aa3b2ea73e6acfea,
         type: 3}
@@ -31,7 +31,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 78095bcb3f4c3ef4aa3b2ea73e6acfea,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78095bcb3f4c3ef4aa3b2ea73e6acfea,
         type: 3}
@@ -63,12 +63,27 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e6095ce7ecdd6e74ab5003cb1ed82df1, type: 2}
+    - target: {fileID: -210464021899581060, guid: 78095bcb3f4c3ef4aa3b2ea73e6acfea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d17d41fb0d41174469851f3343790dcd, type: 2}
+    - target: {fileID: -90085723504949818, guid: 78095bcb3f4c3ef4aa3b2ea73e6acfea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d17d41fb0d41174469851f3343790dcd, type: 2}
     - target: {fileID: 919132149155446097, guid: 78095bcb3f4c3ef4aa3b2ea73e6acfea,
         type: 3}
       propertyPath: m_Name
-      value: car_crashed (1)
+      value: car_crashed_Red
       objectReference: {fileID: 0}
     - target: {fileID: 4446913594108370672, guid: 78095bcb3f4c3ef4aa3b2ea73e6acfea,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: d17d41fb0d41174469851f3343790dcd, type: 2}
+    - target: {fileID: 5238021570824950815, guid: 78095bcb3f4c3ef4aa3b2ea73e6acfea,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
