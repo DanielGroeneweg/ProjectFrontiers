@@ -683,6 +683,16 @@ PrefabInstance:
       propertyPath: firstCheckpoint
       value: 
       objectReference: {fileID: 152259515}
+    - target: {fileID: 3831768972349246512, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294301135949921237, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8047035548056936932, guid: d4b39f6ed647bd148a2dd9da1b2d5a45,
         type: 3}
       propertyPath: timer
@@ -1379,6 +1389,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 257e55e5d0036be469b3040df90b0f08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fillImage: {fileID: 0}
   timeDisplay: {fileID: 1092676830}
   startMinutes: 5
   startSeconds: 0
