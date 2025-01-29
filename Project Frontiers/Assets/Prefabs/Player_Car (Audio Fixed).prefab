@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: -4112246471424943174}
   m_Layer: 0
   m_Name: Player_Car (Audio Fixed)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   - {fileID: 565073157924423082}
   rigidBody: {fileID: 6130638529911672875}
   maxSpeed: 20
-  motorTorque: 2000
+  motorTorque: 500
   brakeTorque: 2000
   passiveBrakeTorque: 500
   steeringRange: 30
@@ -285,6 +285,7 @@ MonoBehaviour:
   scorePrefab: {fileID: 9033602129689638234, guid: 00ef4eca1f2d48644afa7035b20fc145,
     type: 3}
   mainCanvas: {fileID: 0}
+  maxPoints: 50000
   scoreIncreaseForDrifting: 10
   driftAngleMinumim: 15
   timeBeforeStartingDrift: 0.2
