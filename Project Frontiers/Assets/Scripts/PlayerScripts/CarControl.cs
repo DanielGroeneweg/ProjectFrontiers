@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.Events;
+
 public class CarControl : MonoBehaviour
 {
     #region variables
@@ -22,6 +24,8 @@ public class CarControl : MonoBehaviour
     [SerializeField] private float accelerationIncrease;
     [SerializeField] private float maxSpeedIncrease;
     [SerializeField] private float brakesIncrease;
+    public UnityEvent hasSpoilerUpgrade;
+    public UnityEvent hasHoodUpgrade;
 
     // Internal
     private float vInput;
@@ -150,7 +154,11 @@ public class CarControl : MonoBehaviour
         // Brakes
         if (PlayerPrefs.GetInt("BrakesTier") > 1) brakeTorque += (PlayerPrefs.GetInt("BrakesTier") - 1) * brakesIncrease;
 
-        // Spoiler (WIP)
+        // Spoiler
+        if (PlayerPrefs.GetInt("SpoilerTier") >= 1) hasSpoilerUpgrade?.Invoke();
+
+        // Hood
+        if (PlayerPrefs.GetInt("HoodTier") >= 1) hasHoodUpgrade?.Invoke();
     }
     #endregion
 

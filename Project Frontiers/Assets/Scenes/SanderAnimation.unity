@@ -2693,6 +2693,7 @@ GameObject:
   - component: {fileID: 395107591}
   - component: {fileID: 395107595}
   - component: {fileID: 395107596}
+  - component: {fileID: 395107597}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -2914,6 +2915,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 395107597}
+        m_TargetAssemblyTypeName: CursorLockState, Assembly-CSharp
+        m_MethodName: SwitchLockState
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Locked
+          m_BoolArgument: 1
+        m_CallState: 2
   EnableDialogue:
     m_PersistentCalls:
       m_Calls:
@@ -2929,6 +2942,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+--- !u!114 &395107597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395107589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a79f82098cf664f80ddf8de7dd4f5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &405737094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38034,7 +38059,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7569157cc413f48bcef8694d31eca7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerCar: {fileID: 1378993975}
 --- !u!114 &1690557763
 MonoBehaviour:
   m_ObjectHideFlags: 0
