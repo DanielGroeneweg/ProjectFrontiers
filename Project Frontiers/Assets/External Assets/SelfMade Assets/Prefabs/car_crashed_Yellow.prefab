@@ -8,40 +8,25 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 523443153122346593, guid: aa6b4512b6bd42749a0fd0c568c92e1c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b7e4c0ec446cbc749bb1e7a2526c4855, type: 2}
-    - target: {fileID: 3552609585947367352, guid: aa6b4512b6bd42749a0fd0c568c92e1c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b7e4c0ec446cbc749bb1e7a2526c4855, type: 2}
-    - target: {fileID: 3667860898682370818, guid: aa6b4512b6bd42749a0fd0c568c92e1c,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: b7e4c0ec446cbc749bb1e7a2526c4855, type: 2}
     - target: {fileID: 4842493070175907631, guid: aa6b4512b6bd42749a0fd0c568c92e1c,
         type: 3}
       propertyPath: m_Name
-      value: car_crashed_Yellow
+      value: car_crashed_Red Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5221973688098780565, guid: aa6b4512b6bd42749a0fd0c568c92e1c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.087078
+      value: 67.70872
       objectReference: {fileID: 0}
     - target: {fileID: 5221973688098780565, guid: aa6b4512b6bd42749a0fd0c568c92e1c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.6415353
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5221973688098780565, guid: aa6b4512b6bd42749a0fd0c568c92e1c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.158096
+      value: 20.930988
       objectReference: {fileID: 0}
     - target: {fileID: 5221973688098780565, guid: aa6b4512b6bd42749a0fd0c568c92e1c,
         type: 3}
@@ -51,7 +36,7 @@ PrefabInstance:
     - target: {fileID: 5221973688098780565, guid: aa6b4512b6bd42749a0fd0c568c92e1c,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5221973688098780565, guid: aa6b4512b6bd42749a0fd0c568c92e1c,
         type: 3}
