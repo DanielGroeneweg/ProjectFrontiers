@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: -4112246471424943174}
   m_Layer: 0
   m_Name: Player_Car (Audio Fixed)
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -254,7 +254,7 @@ MonoBehaviour:
   - {fileID: 565073157924423082}
   rigidBody: {fileID: 6130638529911672875}
   maxSpeed: 20
-  motorTorque: 2000
+  motorTorque: 500
   brakeTorque: 2000
   passiveBrakeTorque: 500
   steeringRange: 30
@@ -265,6 +265,48 @@ MonoBehaviour:
   accelerationIncrease: 500
   maxSpeedIncrease: 10
   brakesIncrease: 500
+  hasSpoilerUpgrade:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3831768972349246512}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 6848720947551386416}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  hasHoodUpgrade:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6294301135949921237}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &8047035548056936932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,6 +327,7 @@ MonoBehaviour:
   scorePrefab: {fileID: 9033602129689638234, guid: 00ef4eca1f2d48644afa7035b20fc145,
     type: 3}
   mainCanvas: {fileID: 0}
+  maxPoints: 50000
   scoreIncreaseForDrifting: 10
   driftAngleMinumim: 15
   timeBeforeStartingDrift: 0.2
@@ -12450,7 +12493,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 895870607e511044e9b951e595f9d2b9, type: 2}
+  - {fileID: 2100000, guid: 4f526303623b36c4592f903afe57ddfd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14925,6 +14968,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27f8c66d0a5a2bf47b0e8928955cfc74, type: 3}
+--- !u!1 &6294301135949921237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4489814577102534644, guid: 27f8c66d0a5a2bf47b0e8928955cfc74,
+    type: 3}
+  m_PrefabInstance: {fileID: 7572485122108214305}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8010265269897936479 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 449501019388965502, guid: 27f8c66d0a5a2bf47b0e8928955cfc74,
@@ -15019,6 +15068,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a220cebafb78d884bac3db2f1c793cd9, type: 3}
+--- !u!1 &3831768972349246512 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5407042072119587684, guid: a220cebafb78d884bac3db2f1c793cd9,
+    type: 3}
+  m_PrefabInstance: {fileID: 9089532376580243284}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8127618581105578759 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1076249811580333139, guid: a220cebafb78d884bac3db2f1c793cd9,
