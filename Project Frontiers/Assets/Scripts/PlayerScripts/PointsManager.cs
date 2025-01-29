@@ -15,6 +15,9 @@ public class PointsManager : MonoBehaviour
     [SerializeField] private TMP_Text scorePrefab;
     [SerializeField] private Canvas mainCanvas;
 
+    [Header("General")]
+    [SerializeField] private float maxPoints = 50000f;
+
     [Header("Drift Score Stats")]
     [SerializeField] private float scoreIncreaseForDrifting;
     [SerializeField] private float driftAngleMinumim;
@@ -161,7 +164,7 @@ public class PointsManager : MonoBehaviour
         score += driftScore;
         scoreSinceLastCheckpoint += driftScore;
         driftScore = 0;
-        fillImage.fillAmount = (1f / 50000f) * score;
+        fillImage.fillAmount = (1f / maxPoints) * score;
         scoreDisplayText.text = score.ToString();
     }
     private void DriftScore()
@@ -212,7 +215,7 @@ public class PointsManager : MonoBehaviour
     {
         score += Mathf.Round(airtimeScore);
         scoreSinceLastCheckpoint += airtimeScore;
-        fillImage.fillAmount = (1f / 99999f) * score;
+        fillImage.fillAmount = (1f / maxPoints) * score;
         scoreDisplayText.text = score.ToString();
         airtimeScore = 0;
     }
@@ -252,7 +255,7 @@ public class PointsManager : MonoBehaviour
     {
         score -= scoreSinceLastCheckpoint;
         scoreSinceLastCheckpoint = 0;
-        fillImage.fillAmount = (1f / 99999f) * score;
+        fillImage.fillAmount = (1f / maxPoints) * score;
         scoreDisplayText.text = score.ToString();
     }
 }
