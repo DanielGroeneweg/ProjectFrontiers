@@ -7086,6 +7086,16 @@ PrefabInstance:
 
         [$500]'
       objectReference: {fileID: 0}
+    - target: {fileID: 1801264744226642802, guid: 44d5f44bb979bf24caeff5ba4fd26659,
+        type: 3}
+      propertyPath: m_margin.x
+      value: 14.211052
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801264744226642802, guid: 44d5f44bb979bf24caeff5ba4fd26659,
+        type: 3}
+      propertyPath: m_margin.z
+      value: -279.1599
+      objectReference: {fileID: 0}
     - target: {fileID: 3459014377196013998, guid: 44d5f44bb979bf24caeff5ba4fd26659,
         type: 3}
       propertyPath: m_TargetGraphic
