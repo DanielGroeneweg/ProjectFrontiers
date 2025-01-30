@@ -13,9 +13,9 @@ public class FollowPlayer : MonoBehaviour
         Vector3 rotationChange = player.localEulerAngles - oldAngles;
 
         transform.localEulerAngles = new Vector3(
-            player.localEulerAngles.x - rotationChange.x,
-            player.localEulerAngles.y,
-            player.localEulerAngles.z - rotationChange.z);
+            transform.localEulerAngles.x - rotationChange.x,
+            transform.localEulerAngles.y,
+            transform.localEulerAngles.z - rotationChange.z);
 
         oldAngles = player.localEulerAngles;
     }

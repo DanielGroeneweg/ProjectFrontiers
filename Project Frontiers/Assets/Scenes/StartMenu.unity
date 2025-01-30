@@ -331,7 +331,6 @@ GameObject:
   - component: {fileID: 98057826}
   - component: {fileID: 98057829}
   - component: {fileID: 98057828}
-  - component: {fileID: 98057827}
   m_Layer: 5
   m_Name: HighScore
   m_TagString: Untagged
@@ -358,19 +357,6 @@ RectTransform:
   m_AnchoredPosition: {x: -20.5, y: -20.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &98057827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 98057825}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc02c31e70f23046bdec09ca26ad37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyDisplay: {fileID: 98057828}
 --- !u!114 &98057828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1484,7 +1470,6 @@ GameObject:
   - component: {fileID: 909991470}
   - component: {fileID: 909991473}
   - component: {fileID: 909991472}
-  - component: {fileID: 909991471}
   m_Layer: 5
   m_Name: Money
   m_TagString: Untagged
@@ -1511,19 +1496,6 @@ RectTransform:
   m_AnchoredPosition: {x: -14.8, y: 10.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &909991471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 909991469}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc02c31e70f23046bdec09ca26ad37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyDisplay: {fileID: 909991472}
 --- !u!114 &909991472
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2484,7 +2456,6 @@ GameObject:
   - component: {fileID: 1424247343}
   - component: {fileID: 1424247346}
   - component: {fileID: 1424247345}
-  - component: {fileID: 1424247344}
   m_Layer: 5
   m_Name: Money (1)
   m_TagString: Untagged
@@ -2511,19 +2482,6 @@ RectTransform:
   m_AnchoredPosition: {x: -14.8, y: 0.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1424247344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1424247342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bfc02c31e70f23046bdec09ca26ad37b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moneyDisplay: {fileID: 1424247345}
 --- !u!114 &1424247345
 MonoBehaviour:
   m_ObjectHideFlags: 0
