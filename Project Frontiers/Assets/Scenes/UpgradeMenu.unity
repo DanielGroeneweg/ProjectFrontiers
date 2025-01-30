@@ -2495,6 +2495,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9033422822490754532, guid: 44d5f44bb979bf24caeff5ba4fd26659,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033422822490754532, guid: 44d5f44bb979bf24caeff5ba4fd26659,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9102258862592489678, guid: 44d5f44bb979bf24caeff5ba4fd26659,
         type: 3}
       propertyPath: hasEnough.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -4556,6 +4566,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9033422822490754532, guid: 44d5f44bb979bf24caeff5ba4fd26659,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033422822490754532, guid: 44d5f44bb979bf24caeff5ba4fd26659,
+        type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9102258862592489678, guid: 44d5f44bb979bf24caeff5ba4fd26659,
         type: 3}
       propertyPath: hasEnough.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -5739,6 +5759,16 @@ PrefabInstance:
     - target: {fileID: 7028925381002152864, guid: 44d5f44bb979bf24caeff5ba4fd26659,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033422822490754532, guid: 44d5f44bb979bf24caeff5ba4fd26659,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9033422822490754532, guid: 44d5f44bb979bf24caeff5ba4fd26659,
+        type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9102258862592489678, guid: 44d5f44bb979bf24caeff5ba4fd26659,
