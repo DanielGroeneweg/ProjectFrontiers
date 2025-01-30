@@ -6,6 +6,6 @@ public class DisplayHighScore : MonoBehaviour
     [SerializeField] private TMP_Text highscoreDisplay;
     private void Start()
     {
-        highscoreDisplay.text = "Highscore: " + PlayerPrefs.GetInt("HighScore");
+        highscoreDisplay.text = PlayerPrefs.GetInt("HighScore").ToString();
     }
 }
