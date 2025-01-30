@@ -63,7 +63,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.279
+    m_Value: 0.22
   smoothness:
     m_OverrideState: 0
     m_Value: 0.2
@@ -88,13 +88,13 @@ MonoBehaviour:
     m_Value: 1
   gaussianStart:
     m_OverrideState: 1
-    m_Value: 14
+    m_Value: 40
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 30
+    m_Value: 60
   gaussianMaxRadius:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.794
   highQualitySampling:
     m_OverrideState: 0
     m_Value: 0
@@ -131,13 +131,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.87066, z: 0.8864088, w: -0.17910448}
+    m_Value: {x: 1, y: 0.83032686, z: 0.7627387, w: -0.17910448}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 0.9012009, z: 0.80252194, w: -0.04477612}
+    m_Value: {x: 1, y: 0.9019726, z: 0.7540623, w: -0.04477612}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 0.99835515, y: 1, z: 0.99670935, w: 3.475084e-10}
+    m_Value: {x: 1, y: 0.9752451, z: 0.9170401, w: 3.475084e-10}
   shadowsStart:
     m_OverrideState: 0
     m_Value: 0
