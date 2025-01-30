@@ -18,6 +18,9 @@ public class Speedometer : MonoBehaviour
     {
         int speed = (int)Mathf.Round(Mathf.Clamp(Mathf.Abs(carControl.ForwardSpeed()), 0, carControl.maxSpeed) * modifier);
         speedText.text = speed.ToString();
-        fillImage.fillAmount = carControl.SpeedFactor();
+
+        float speedFactor = carControl.SpeedFactor();
+        float fill = Mathf.Floor(speedFactor / 0.02f) * 0.02f;
+        fillImage.fillAmount = Mathf.Clamp(fill, 0, 1);
     }
 }
