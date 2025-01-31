@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 656397239086643498}
   - component: {fileID: 6248827185567395562}
   - component: {fileID: 7255027359067187815}
+  - component: {fileID: -1169489397312581634}
   m_Layer: 0
   m_Name: TrashCan
   m_TagString: Untagged
@@ -84,6 +85,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &-1169489397312581634
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3632694439810390005}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 87.59508, y: 152.98296, z: 150.70328}
+  m_Center: {x: 0.0000038146973, y: 0, z: 0.0000076293945}
 --- !u!1 &9112046543024737932
 GameObject:
   m_ObjectHideFlags: 0
