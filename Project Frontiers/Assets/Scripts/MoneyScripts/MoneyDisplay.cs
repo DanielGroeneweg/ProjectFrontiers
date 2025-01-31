@@ -8,11 +8,5 @@ public class MoneyDisplay : MonoBehaviour
     void Update()
     {
         moneyDisplay.text = PlayerPrefs.GetInt("Money").ToString();
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            money = PlayerPrefs.GetInt("Money") + 5000;
-            PlayerPrefs.SetInt("Money", money);
-        }
     }
 }
