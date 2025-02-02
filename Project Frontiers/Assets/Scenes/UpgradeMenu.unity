@@ -2842,6 +2842,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9102258862592489678, guid: 44d5f44bb979bf24caeff5ba4fd26659,
         type: 3}
+      propertyPath: hasEnough.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: BrakesTier
+      objectReference: {fileID: 0}
+    - target: {fileID: 9102258862592489678, guid: 44d5f44bb979bf24caeff5ba4fd26659,
+        type: 3}
       propertyPath: insufficientFunds.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 0}
@@ -4963,6 +4968,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9102258862592489678, guid: 44d5f44bb979bf24caeff5ba4fd26659,
         type: 3}
+      propertyPath: hasEnough.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: HoodTier
+      objectReference: {fileID: 0}
+    - target: {fileID: 9102258862592489678, guid: 44d5f44bb979bf24caeff5ba4fd26659,
+        type: 3}
       propertyPath: insufficientFunds.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 0}
@@ -6168,6 +6178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9102258862592489678, guid: 44d5f44bb979bf24caeff5ba4fd26659,
         type: 3}
+      propertyPath: hasEnough.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument
+      value: SpoilerTier
+      objectReference: {fileID: 0}
+    - target: {fileID: 9102258862592489678, guid: 44d5f44bb979bf24caeff5ba4fd26659,
+        type: 3}
       propertyPath: insufficientFunds.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
       value: 
       objectReference: {fileID: 0}
@@ -6718,37 +6733,6 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!1 &2065836529
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2065836530}
-  m_Layer: 0
-  m_Name: .
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &2065836530
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2065836529}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.108746, y: -15.771614, z: 32.77348}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2068291881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10530,7 +10514,6 @@ SceneRoots:
   - {fileID: 1733449882}
   - {fileID: 794682057}
   - {fileID: 2112034087}
-  - {fileID: 2065836530}
   - {fileID: 1034590600}
   - {fileID: 138662240}
   - {fileID: 1083086999}
